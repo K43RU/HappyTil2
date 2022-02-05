@@ -1,5 +1,12 @@
-<div>
-  <input placeholder="informe o seu nome" [(ngModel)]="nome">
-  <input placeholder="informe sua senha" type="password" [(ngModel)]="senha">
-  <button (click)='entrar()'>entrar</button>
+<body>
+<div id='box'>
+  <div id="header">
+    Cãodastro
+  </div>
+<div id='inputs'>
+  <input placeholder="informe o seu nome" [(ngModel)]="nome" id='login'>
+  <input placeholder="informe seu email" [(ngModel)]="email" id='login'>
+  <button (click)='entrar()' id="entrar">entrar</button>
 </div>
+</div>
+</body>

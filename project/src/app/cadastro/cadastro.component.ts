@@ -11,14 +11,14 @@ export class CadastroComponent implements OnInit {
   constructor( private router: Router ) { }
 
   nome = '';
-  senha = '';
+  email = '';
 
   ngOnInit() {
   }
 
   entrar(){
     localStorage.setItem('nome', this.nome);
-    localStorage.setItem('senha', this.senha);
+    localStorage.setItem('email', this.email);
     this.router.navigate(['/home/']);
   }
 

@@ -13,4 +13,16 @@ export class MainComponent implements OnInit {
   ngOnInit() {
   }
 
+  irLoja(){
+    this.router.navigate(['/loja/']);
+  }
+
+  irCarrinho(){
+    this.router.navigate(['/loja/carrinho']);
+  }
+
+  irHorarios(){
+    this.router.navigate(['/loja/horarios']);
+  }
+
 }

@@ -5,6 +5,7 @@ import { HorariosComponent } from './horarios/horarios.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeModule } from '../home/home.module'
 
 const routes: Routes = [{
   path: 'loja', children: [
@@ -21,6 +22,7 @@ const routes: Routes = [{
     FormsModule
   ],
   declarations: [ComprarComponent, HorariosComponent, CarrinhoComponent],
-  exports: [ ComprarComponent, HorariosComponent, CarrinhoComponent ]
+  exports: [ ComprarComponent, HorariosComponent, CarrinhoComponent ],
+  bootstrap: [ HomeModule ]
 })
 export class LojaModule { }
