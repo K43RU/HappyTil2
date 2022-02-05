@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;1,700&display=swap');
-
 *{
     margin: 0;
     padding: 0%;
@@ -13,6 +11,7 @@ body{
     align-items: center;
     width: 100vw;
     height: 100vh;
+    background-color: #ffd000;
 }
 
 #inputs{
@@ -20,9 +19,8 @@ body{
 }
 
 #box{
-    width: 350px;
-    height: 400px;
-    background-color: #FFA500;
+    width: 500px;
+    height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,43 +29,54 @@ body{
 
 #login{
     padding: 5px;
-    margin: 7px;
+    margin: 13px;
     border: none;
     background-color: transparent;
     border-bottom: white 1px solid;
     outline: none;
-    width: 210px;
+    width: 290px;
     color: white;
+    transition: 0.3s;
 }
 
 #login:hover{
     transition: 0.3s;
-    border-bottom: #9370DB 1px solid;
+    border-bottom: #000000 1px solid;
 }
 
 #login:focus{
-    border-bottom: #9370DB 2px solid;
+    transition: 0.3s;
+    border-bottom: #000000 1px solid;
+    color: #000000;
 }
 
 #login::placeholder{
-    color: rgb(218, 218, 218);
+    color: rgb(240, 240, 240);
 }
 
 #entrar{
     transition: 0.3s;
-    width: 45px;
-    height: 30px;
-    margin-top: 7px;
-    margin-left: 41%;
+    width: 90px;
+    height: 45px;
+    margin-top: 13px;
+    margin-left: 36%;
     font-size: 13px;
     border-radius: 3px;
     border: none;
+    color: #ffcc24;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #entrar:hover{
+    border-radius: 30px;
     transition: 0.5s;
-    color: white;
-    background-color: #9370DB;
+    color: #ffc400;
+    background-color: #ffffff;
+    width: 300px;
+    margin-left: 12px;
 }
 
 #header{
@@ -75,13 +84,37 @@ body{
     justify-content: center;
     align-items: center;
     position: fixed;
-    margin-bottom: 23%;
-    background-color: #ffc14e;
-    border-radius: 3px;
-    height: 10%;
-    width: 26%;
-    border-top: 1px solid #ec9a00;
-    border-bottom: 2px solid #ec9a00;
+    margin-bottom: 35vh;
+    font-weight: 900;
+    font-size: 40px;
+    color: black;
+    padding-bottom: 3px;
+    border-bottom: 1px black solid;
+}
+
+#iguana{
+    position: fixed;
+    margin-top: 35%;
+    margin-left: 75%;
 }
 
 
+@keyframes alter-color {
+    0% {
+        color: #ffffff;
+    }
+    0%{
+        color: #000000;
+    }
+}
+
+#logo{
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    margin-top: 40%;
+    margin-right: 2vw;
+    display: flex;
+    font-weight: 700;
+    font-size: 20px;
+}

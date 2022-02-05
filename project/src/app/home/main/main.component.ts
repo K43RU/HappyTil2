@@ -25,4 +25,9 @@ export class MainComponent implements OnInit {
     this.router.navigate(['/loja/horarios']);
   }
 
+  deslogar(){
+    this.router.navigate(['']);
+    localStorage.removeItem('nome');
+  }
+
 }

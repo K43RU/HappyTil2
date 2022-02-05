@@ -19,7 +19,7 @@ class CheckLogged implements CanActivate {
         let user = localStorage.getItem('nome');
         let email = localStorage.getItem('email');
 
-        if (user == "marcos") {
+        if (user != '' && email != '') {
             return true;
         } else {
             this.router.navigate(['/']);
