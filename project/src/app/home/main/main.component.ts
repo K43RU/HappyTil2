@@ -30,4 +30,13 @@ export class MainComponent implements OnInit {
     localStorage.removeItem('nome');
   }
 
+  
+
+  abrirConfig(){
+    let user = document.createElement('div');
+    user.className = 'user';
+    document.body.appendChild(user);
+    console.log('oi');
+  }
+
 }

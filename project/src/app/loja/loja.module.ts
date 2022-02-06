@@ -23,4 +23,5 @@ const routes: Routes = [{
   declarations: [ComprarComponent, HorariosComponent, CarrinhoComponent],
   exports: [ ComprarComponent, HorariosComponent, CarrinhoComponent ]
 })
+
 export class LojaModule { }
