@@ -37,6 +37,7 @@ body{
     width: 290px;
     color: white;
     transition: 0.3s;
+    font-size: 16px;
 }
 
 #login:hover{
