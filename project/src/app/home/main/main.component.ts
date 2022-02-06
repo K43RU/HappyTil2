@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class MainComponent implements OnInit {
 
-  constructor( private router: Router ) { }
+  constructor( private router: Router) { }
 
   ngOnInit() {
   }
@@ -30,13 +30,11 @@ export class MainComponent implements OnInit {
     localStorage.removeItem('nome');
   }
 
-  
-
   abrirConfig(){
-    let user = document.createElement('div');
-    user.className = 'user';
-    document.body.appendChild(user);
-    console.log('oi');
+    let button = document.createElement('button')
+    button.id = 'rota';
+    document.body.appendChild(button);
   }
 
 }
+
