@@ -31,9 +31,9 @@ export class MainComponent implements OnInit {
   }
 
   abrirConfig(){
-    let button = document.createElement('button')
-    button.id = 'rota';
-    document.body.appendChild(button);
+    let user = document.createElement('div');
+    user.id = 'user';
+    document.body.appendChild(user);
   }
 
 }
