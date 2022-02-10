@@ -37,7 +37,7 @@ export class CadastroComponent implements OnInit {
             ).then(function (result) {
                 return result.json();
             }).then((dados) => {
-                if(dados != ""){
+                if(!dados.user.nome){
                 this.router.navigate(['/home/']);
                 }
                 console.log(dados);
