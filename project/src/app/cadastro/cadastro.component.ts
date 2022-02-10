@@ -44,11 +44,9 @@ export class CadastroComponent implements OnInit {
             }).catch((erro) => {
                 console.log(erro)
             })
-
-
-            localStorage.setItem('nome', this.nome);
-            localStorage.setItem('senha', this.senha);
         }
+        localStorage.setItem('nome', this.nome);
+        localStorage.setItem('senha', this.senha);
     }
 
     registro() {
