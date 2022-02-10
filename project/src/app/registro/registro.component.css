@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header{
+    color: #ffd000;
+    font-size: 40px;
+    position: fixed;
+    margin-bottom: 45vh;
+    border-bottom: #ffd000 1px solid;
+    font-weight: 900;
+    padding-bottom: 3px;
+}
+
+#login{
+    padding: 5px;
+    margin: 13px;
+    border: none;
+    background-color: transparent;
+    border-bottom: white 1px solid;
+    outline: none;
+    width: 290px;
+    color: white;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+#login:hover{
+    transition: 0.3s;
+    border-bottom: #ffd000 1px solid;
+}
+
+#login:focus{
+    transition: 0.3s;
+    border-bottom: #ffd000 1px solid;
+    color: #ffd000;
+}
+
+#login::placeholder{
+    color: rgb(240, 240, 240);
+    transition: 0.3s;
+}
+
+#login:focus::placeholder{
+    color: #ffd000;
+    transition: 0.3s;
+}
+
+#login:hover::placeholder{
+    color: #ffd000;
+    transition: 0.3s;
+}
+
+#inputs{
+    display: grid;
+}
+
+#entrar{
+    transition: 0.3s;
+    width: 90px;
+    height: 45px;
+    margin-top: 13px;
+    margin-left: 36%;
+    font-size: 13px;
+    border-radius: 3px;
+    border: none;
+    color: black;
+    background-color: #ffd000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#entrar:hover{
+    border-radius: 30px;
+    transition: 0.5s;
+    color: black;
+    background-color: #ffd000;
+    width: 300px;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+#conta{
+    color: #ffd000;
+    margin-top: 5%;
+    margin-left: 28.5%;
+}
+
+#conta:hover{
+    cursor: pointer;
+    text-decoration: overline 1px;
+}
+
+#logo{
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    margin-top: 40%;
+    margin-right: 2vw;
+    display: flex;
+    font-weight: 700;
+    font-size: 20px;
+    color: #ffd000;
+}
+
+#login1{
+    padding: 5px;
+    margin: 13px;
+    border: none;
+    background-color: transparent;
+    border-bottom: white 1px solid;
+    outline: none;
+    width: 290px;
+    color: white;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+#login1:hover{
+    transition: 0.3s;
+    border-bottom: #ffd000 1px solid;
+}
+
+#login1:focus{
+    transition: 0.3s;
+    border-bottom: #ffd000 1px solid;
+    color: #ffd000;
+}
+
+#login1::placeholder{
+    color: rgb(240, 240, 240);
+}
+
+#login1:focus::placeholder{
+    color: #ffd000;
+    transition: 0.3s;
+}
+
+#login1:hover::placeholder{
+    color: #ffd000;
+    transition: 0.3s;
+}
+
+#login2{
+    padding: 5px;
+    margin: 13px;
+    border: none;
+    background-color: transparent;
+    border-bottom: white 1px solid;
+    outline: none;
+    width: 290px;
+    color: white;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+#login2:hover{
+    transition: 0.3s;
+    border-bottom: #ffd000 1px solid;
+}
+
+#login2:focus{
+    transition: 0.3s;
+    border-bottom: #ffd000 1px solid;
+    color: #ffd000;
+}
+
+#login2::placeholder{
+    color: rgb(240, 240, 240);
+}
+
+#login2:focus::placeholder{
+    color: #ffd000;
+    transition: 0.3s;
+}
+
+#login2:hover::placeholder{
+    color: #ffd000;
+    transition: 0.3s;
+}

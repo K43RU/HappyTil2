@@ -32,7 +32,7 @@ body{
     margin: 13px;
     border: none;
     background-color: transparent;
-    border-bottom: white 1px solid;
+    border-bottom: rgb(255, 255, 255) 1px solid;
     outline: none;
     width: 290px;
     color: white;
@@ -52,6 +52,34 @@ body{
 }
 
 #login::placeholder{
+    color: rgb(240, 240, 240);
+}
+
+#login1{
+    padding: 5px;
+    margin: 13px;
+    border: none;
+    background-color: transparent;
+    border-bottom: white 1px solid;
+    outline: none;
+    width: 290px;
+    color: white;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+#login1:hover{
+    transition: 0.3s;
+    border-bottom: #000000 1px solid;
+}
+
+#login1:focus{
+    transition: 0.3s;
+    border-bottom: #000000 1px solid;
+    color: #000000;
+}
+
+#login1::placeholder{
     color: rgb(240, 240, 240);
 }
 
@@ -111,3 +139,34 @@ body{
     font-size: 20px;
 }
 
+#conta{
+    color: black;
+    margin-top: 5%;
+    margin-left: 23%;
+}
+
+#conta:hover{
+    cursor: pointer;
+    text-decoration: overline 1px;
+}
+
+#login:focus::placeholder{
+    color: black;
+    transition: 0.3s;
+}
+
+#login:hover::placeholder{
+    color: black;
+    transition: 0.3s;
+}
+
+
+#login1:focus::placeholder{
+    color: black;
+    transition: 0.3s;
+}
+
+#login1:hover::placeholder{
+    color: black;
+    transition: 0.3s;
+}

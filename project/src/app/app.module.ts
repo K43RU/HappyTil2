@@ -6,18 +6,19 @@ import { CommonModule } from '@angular/common';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { FormsModule } from '@angular/forms';
 import CheckLogged from './checkLogged.canactivate';
-import { HomeModule } from './home/home.module'
+import { HomeModule } from './home/home.module';
+import { RegistroComponent } from './registro/registro.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    CadastroComponent
+    CadastroComponent,
+    RegistroComponent
   ],
   imports: [
     RouterModule.forRoot([
-      {
-        path: '', component: CadastroComponent, canActivate: []
-      }
+      { path: '', component: CadastroComponent, canActivate: [] },
+      { path: 'registro', component: RegistroComponent }
     ]),
     BrowserModule,
     RouterModule,

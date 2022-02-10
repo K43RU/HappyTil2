@@ -30,7 +30,7 @@ login(nickname, password) {
         method: 'POST',
         body: JSON.stringify(
             {
-                nome: nickname, email: password
+                nome: nickname, pass: password
             }
         ),
         headers: {

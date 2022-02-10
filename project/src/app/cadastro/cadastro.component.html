@@ -5,8 +5,9 @@
   </div>
 <div id='inputs'>
   <input placeholder="informe o seu nome" [(ngModel)]="nome" id='login'>
-  <input placeholder="informe seu email" [(ngModel)]="email" id='login'>
+  <input placeholder="informe a sua senha" [(ngModel)]="senha" id='login1' type="password">
   <button (click)='entrar()' id="entrar">entrar</button>
+  <div id="conta" (click)="registro()">ainda não tenho conta</div>
 </div>
 </div>
 <div id='logo'>

@@ -15,12 +15,12 @@ inserirRota('/buscar_usuario', function (dados, resposta) {
 
 inserirRota('/login', function (dados, resposta) {
     console.log(dados)
-    database(`SELECT * FROM USER WHERE NICKNAME = "${dados.nome}" AND PASSWORD = "${dados.nickname}" LIMIT 1`).then(result => {
-        console.log('usuario buscado com sucesso');
-        resposta({ list: result });
+    database(`SELECT * FROM USER WHERE NOME = "${dados.nome}" AND PASSWORD = "${dados.password}" LIMIT 1`).then(result => {
+        console.log('usuario logado sucesso');
+        resposta({ user: result[0] });
     }).catch(erro => {
         console.log('erro ao buscar usuário');
-        resposta({ erro: 'erro ao buscar o usuário!' })
+        resposta({ erro: 'erro ao logar!' })
     });
 
 });
@@ -32,11 +32,15 @@ inserirRota('/criar_usuario', function name(dados, resposta) {
         return resposta({ erro: 'é necessário preencher o nome' })
     }
 
-    if (!dados.nome) {
-        return resposta({ erro: 'é necessário preencher o nickname' })
+    if (!dados.email) {
+        return resposta({ erro: 'é necessário preencher o email' })
     }
 
-    database(`INSERT INTO USER (NOME, NICKNAME) VALUES ("${dados.nome}", "${dados.nickname}")`).then(result => {
+    if (!dados.password) {
+        return resposta({ erro: 'é necessário preencher a senha' })
+    }
+
+    database(`INSERT INTO USER (NOME, EMAIL, PASSWORD) VALUES ("${dados.nome}", "${dados.email}", "${dados.password}")`).then(result => {
         console.log('usuario inserido com sucesso');
         resposta({ message: 'usuario inserido com sucesso!' });
     }).catch(erro => {
