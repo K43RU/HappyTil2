@@ -11,7 +11,8 @@ export class MainComponent implements OnInit {
   constructor( private router: Router) { }
 
   nome = localStorage.getItem('nome');
-  email = localStorage.getItem('email')
+  email = localStorage.getItem('email');
+  img = localStorage.getItem('img');
 
   ngOnInit() {
   }

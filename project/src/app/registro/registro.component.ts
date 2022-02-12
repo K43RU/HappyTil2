@@ -8,11 +8,14 @@ import { Router } from '@angular/router';
 })
 export class RegistroComponent implements OnInit {
 
-  constructor( private router: Router ) { }
+  constructor( private router: Router ) {
+    
+   }
 
   nome = '';
   email = '';
   senha = '';
+  img = '';
 
   ngOnInit() {
   }
@@ -23,7 +26,7 @@ export class RegistroComponent implements OnInit {
         method: 'POST',
         body: JSON.stringify(
             {
-                nome: this.nome, email: this.email, password: this.senha
+                nome: this.nome, email: this.email, password: this.senha, img: this.img
             }
         ),
         headers: {
@@ -32,9 +35,10 @@ export class RegistroComponent implements OnInit {
     }
 ).then(function (result){
     return result.json();
-}).then(function (dados){
+}).then((dados) => {
+  
     console.log(dados);
-}).catch(function(erro){
+}).catch((erro) => {
     console.log(erro)
 })
 if(this.nome != '' && this.email != '' && this.senha != ''){

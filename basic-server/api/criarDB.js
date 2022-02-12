@@ -13,7 +13,8 @@ database(`CREATE TABLE IF NOT EXISTS USER (
     ID INTEGER PRIMARY KEY AUTOINCREMENT,
     NOME varchar(30),
     EMAIL varchar(30),
-    PASSWORD varchar(30)
+    PASSWORD varchar(30),
+    IMG varchar(200)
     )`).then(result => {
     console.log('tabela criada')
 }).catch(erro => {
