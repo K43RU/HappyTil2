@@ -18,6 +18,8 @@ export class CadastroComponent implements OnInit {
     ngOnInit() {
         this.usuarioService.buscarUsuarios().then(resultado => { console.log('RESULTADO:', resultado); })
             .catch(erro => { console.log('ERRO AO BUSCAR USUARIOS:', erro) });
+            localStorage.removeItem('nome');
+            localStorage.removeItem('senha');
     }
 
     entrar() {
@@ -36,9 +38,12 @@ export class CadastroComponent implements OnInit {
                 }
             ).then(function (result) {
                 return result.json();
+                
             }).then((dados) => {
+                console.log(dados.user.EMAIL)
                 if(!dados.user.nome){
-                this.router.navigate(['/home/']);  
+                localStorage.setItem('email', dados.user.EMAIL);
+                this.router.navigate(['/home/']);
                 }
                 console.log(dados);
             }).catch((erro) => {

@@ -1,3 +1,4 @@
+import { getLocaleDayPeriods } from "@angular/common";
 import { Injectable, Input } from "@angular/core";
 import {
     ActivatedRouteSnapshot,
@@ -19,11 +20,11 @@ class CheckLogged implements CanActivate {
         let user = localStorage.getItem('nome');
         let senha = localStorage.getItem('senha');
 
-        if (user != '' && senha != '') {
-            return true;
-        } else {
+        if (user == undefined && senha == undefined) {
             this.router.navigate(['/']);
             return false;
+        } else{   
+            return true;
         }
     }
 }

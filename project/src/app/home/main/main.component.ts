@@ -10,6 +10,9 @@ export class MainComponent implements OnInit {
 
   constructor( private router: Router) { }
 
+  nome = localStorage.getItem('nome');
+  email = localStorage.getItem('email')
+
   ngOnInit() {
   }
 
@@ -31,9 +34,10 @@ export class MainComponent implements OnInit {
   }
 
   abrirConfig(){
-    let user = document.createElement('div');
-    user.id = 'user';
-    document.body.appendChild(user);
+    document.getElementById('user').style.width = '350px'
+    document.getElementById('user').style.height = '80vh'
+    console.log(this.nome, this.email)
+    console.log('criado');
   }
 
 }
