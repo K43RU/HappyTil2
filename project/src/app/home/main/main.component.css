@@ -69,10 +69,96 @@ body{
     margin-left: 42%;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 0;
+}
 
+@keyframes animation {
+    from {
+        transform: translateY(100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+#noon{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50%;
+    margin-left: 28%;
+}
+
+#file-id{
+    width: 0px;
+    height: 0px; 
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    margin-top: 10%;
+    margin-right: 5%;
+}
+
+#logout{
+    border: none;
+    width: 0px;
+    height: 0px;
+    margin-right: 6%;
+    background-color: #1b1b1b;
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+    position: fixed;
+    transition: 0.3s;
+}
+
+#logout:hover{
+    background-color: #ff542a;
+    width: 120px;
+    border-radius: 30px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #ff542a;
+    color: #1b1b1b;
+    margin-right: 90px;
+}
+
+#close{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 0px;
+    height: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1b1b1b;
+
+}
+
+#close:hover{
+    background-color: #ff542a;
+}
+
+#xis{
+    color: white;
+    width: 0px;
+    height: 0px;
+}
+
+#xis:hover{
+    color: #1b1b1b;
+}
+
+#informacoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media(max-width: 700px){

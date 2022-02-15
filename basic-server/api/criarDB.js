@@ -14,7 +14,7 @@ database(`CREATE TABLE IF NOT EXISTS USER (
     NOME varchar(30),
     EMAIL varchar(30),
     PASSWORD varchar(30),
-    IMG varchar(200)
+    IMG varchar(1000000)
     )`).then(result => {
     console.log('tabela criada')
 }).catch(erro => {

@@ -14,9 +14,18 @@
 </div>
 
 <div id="user">
-  <img [src]=img>
+  <div id="close" (click)="close()" src="" alt="">
+    <svg id="xis" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>Close</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/></svg>
+  </div>
+  
+  <img [src]=img id="file-id">
+  <div id='iformacoes'style="text-align: center; position: absolute;">
+  <div id="noon">
   {{nome}}<br>
-  {{email}}
+  {{email}}<br>
+  </div>
+  </div>
+  <button (click)="logout()" id="logout" style="margin-top: 150px; margin-left: 10%;">sair</button>
 </div>
 
 </div>
