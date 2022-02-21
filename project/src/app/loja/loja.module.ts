@@ -5,9 +5,10 @@ import { HorariosComponent } from './horarios/horarios.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
+import CheckLogged from '../checkLogged.canactivate';
 
 const routes: Routes = [{
-  path: 'loja', children: [
+  path: 'loja', canActivate: [CheckLogged],children: [
     {path: '', component: ComprarComponent},
     {path: 'carrinho', component: CarrinhoComponent},
     {path: 'horarios', component: HorariosComponent}

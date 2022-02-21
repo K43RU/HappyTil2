@@ -50,11 +50,7 @@ export class RegistroComponent implements OnInit {
   registro() {
     this.router.navigate(['//'])
   }
-
-  exibirImg() {
-    console.log(this.img);
-  }
-
+                    
   mudanca(file) {
     var reader = new FileReader();
     reader.readAsDataURL(file);
