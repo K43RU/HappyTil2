@@ -1,3 +1,10 @@
-<p>
-  horarios works!
-</p>
+<div>
+  <input placeholder="nome do pet" [(ngModel)]="pet">
+  <select [(ngModel)]="especie"><option>gato</option>
+          <option>cachorro</option>
+          <option>sapo</option>
+          <option>lagarto</option></select>
+  <input placeholder="data" type="date" [(ngModel)]="data">
+  <input placeholder="hora" type="time" [(ngModel)]="hora">
+  <button (click)="marcar()">marcar</button>
+</div>

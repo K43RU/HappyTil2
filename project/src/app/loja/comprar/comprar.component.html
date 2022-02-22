@@ -2,9 +2,11 @@
   <header id="header"></header>
 
   <div id="produtos">
-    <div id="produto"></div>
-    <div id="produto"></div>
-    <div id="produto"></div>
+    cadadastro de produtos:
+    <input placeholder="nome" [(ngModel)]="nome">
+    <input placeholder="preco" type="number" [(ngModel)]="preco">
+    <input type="file" [(ngModel)]="img">
+    <button (click)="cadastroProduto()">cadastrar</button>
   </div>
 
 </body>

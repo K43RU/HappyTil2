@@ -9,6 +9,38 @@ export class HorariosComponent implements OnInit {
 
   constructor() { }
 
+  pet = '';
+  especie = '';
+  data = '';
+  hora = '';
+
+  marcar(){
+    console.log(this.pet);
+    fetch('/api/marcar_horario',
+    {
+        method: 'POST',
+        body: JSON.stringify(
+          {
+            pet: this.pet, especie: this.especie, data: this.data, hora: this.hora
+          }
+        ),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+   ).then(function (result){
+    return result.json();
+    }).then(function (dados){
+    console.log(dados);
+    }).catch(function(erro){
+    console.log(erro)
+    })
+    this.pet = '';
+    this.especie = '';
+    this.data = '';
+    this.hora = '';
+  }
+
   ngOnInit() {
   }
 
