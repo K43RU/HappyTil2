@@ -1,3 +1,12 @@
-<p>
-  comprar works!
-</p>
+<body>
+  <header id="header"></header>
+
+  <div id="produtos">
+    cadadastro de produtos:
+    <input placeholder="nome" [(ngModel)]="nome">
+    <input placeholder="preco" type="number" [(ngModel)]="preco">
+    <input type="file" [(ngModel)]="img">
+    <button (click)="cadastroProduto()">cadastrar</button>
+  </div>
+
+</body>

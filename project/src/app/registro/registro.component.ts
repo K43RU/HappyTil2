@@ -8,46 +8,60 @@ import { Router } from '@angular/router';
 })
 export class RegistroComponent implements OnInit {
 
-  constructor( private router: Router ) {
-    
-   }
+  constructor(private router: Router) {
+
+  }
 
   nome = '';
   email = '';
   senha = '';
-  img = '';
+  img = undefined;
+  img64 = undefined;
 
   ngOnInit() {
   }
 
-  entrar(){
+  entrar() {
     fetch('/api/criar_usuario',
-    {
+      {
         method: 'POST',
         body: JSON.stringify(
-            {
-                nome: this.nome, email: this.email, password: this.senha, img: this.img
-            }
+          {
+            nome: this.nome, email: this.email, password: this.senha, img: this.img64
+          }
         ),
         headers: {
-            'Content-Type': 'application/json'
+          'Content-Type': 'application/json'
         }
+      }
+    ).then(function (result) {
+      return result.json();
+    }).then((dados) => {
+
+      console.log(dados);
+    }).catch((erro) => {
+      console.log(erro)
+    })
+    if (this.nome != '' && this.email != '' && this.senha != '') {
+      this.router.navigate(['//'])
     }
-).then(function (result){
-    return result.json();
-}).then((dados) => {
-  
-    console.log(dados);
-}).catch((erro) => {
-    console.log(erro)
-})
-if(this.nome != '' && this.email != '' && this.senha != ''){
-    this.router.navigate(['//'])
-  }
-}
-
-  registro(){
-    this.router.navigate(['//'])
   }
 
+  registro() {
+    this.router.navigate(['//'])
+  }
+                    
+  mudanca(file) {
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      this.img64 = reader.result;
+    };
+    reader.onerror = (error) => {
+      console.log('Error: ', error);
+    };
+  }
+
 }
+
+

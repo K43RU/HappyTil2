@@ -18,7 +18,7 @@ body{
     color: #ffd000;
     font-size: 40px;
     position: fixed;
-    margin-bottom: 45vh;
+    margin-bottom: 55vh;
     border-bottom: #ffd000 1px solid;
     font-weight: 900;
     padding-bottom: 3px;
@@ -196,4 +196,20 @@ body{
     display: grid;
     color: white;
     
+}
+
+.btn{
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    margin-left: 5%;
+    width: 290px;
+}
+
+.btn:hover{
+    background-color: #ffd000;
+    color: black;
+    border: 1px solid black;
 }
