@@ -9,7 +9,7 @@ inserirRota('/cadastroProd', function name(dados, resposta) {
         return resposta({ erro: 'é necessário preencher o preco' })
     }
 
-    database(`INSERT INTO PROD_APROVAR (NOME, PRECO, IMG) VALUES ("${dados.nome}", "${dados.preco}"`).then(result => {
+    database(`INSERT INTO PROD_APROVAR (NOME, PRECO) VALUES ("${dados.nome}", "${dados.preco}"`).then(result => {
         console.log('produto inserido com sucesso');
         resposta({ message: 'produto inserido com sucesso!' });
     }).catch(erro => {
@@ -28,5 +28,4 @@ inserirRota('/buscar_prod', function (dados, resposta) {
             console.log('erro ao buscar produto');
             resposta({ erro: 'erro ao buscar o produto!' })
         });
-
 });
