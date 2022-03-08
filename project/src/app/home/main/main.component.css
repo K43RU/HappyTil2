@@ -101,7 +101,6 @@ body{
     color: white;
     font-weight: 700;
     border-radius: 5px;
-    transition: 0.1s;
     right: 0;
     font-size: 0px;
     margin-top: 120px;
@@ -110,10 +109,9 @@ body{
 #logout:hover{
     background-color: #ff542a;
     width: 120px;
-    border-radius: 30px;
-    transition: 0.3s;
     box-shadow: 0 0 10px #ff542a;
     color: #1b1b1b;
+    cursor: pointer;
 }
 
 #close{
