@@ -10,7 +10,7 @@ inserirRota('/marcar_horario', function name(dados, resposta) {
     }
 
     if (!dados.data) {
-        return resposta({ erro: 'é necessário informar a senha' })
+        return resposta({ erro: 'é necessário informar a data' })
     }
 
     if (!dados.hora) {
@@ -18,10 +18,10 @@ inserirRota('/marcar_horario', function name(dados, resposta) {
     }
 
     database(`INSERT INTO HORARIO (PET, ESPECIE, DATA, HORA) VALUES ("${dados.pet}", "${dados.especie}", "${dados.data}", "${dados.hora}")`).then(result => {
-        console.log('usuario inserido com sucesso');
+        console.log('horario inserido com sucesso');
         resposta({ message: 'horario inserido com sucesso!' });
     }).catch(erro => {
-        console.log('erro ao inserir usuário');
+        console.log('erro ao inserir horario');
         resposta({ erro: 'erro ao inserir o horario!' })
     });
 })

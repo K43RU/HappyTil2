@@ -50,8 +50,7 @@ database(`CREATE TABLE IF NOT EXISTS PRODUTOS (
 database(`CREATE TABLE IF NOT EXISTS PROD_APROVAR (
     ID INTEGER PRIMARY KEY AUTOINCREMENT,
     NOME varchar(30),
-    PRECO varchar(30),
-    IMG varchar(9999999)
+    PRECO varchar(30)
     )`).then(result => {
     console.log('tabela criada')
 }).catch(erro => {

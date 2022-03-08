@@ -22,7 +22,7 @@ export class ComprarComponent implements OnInit {
       {
         method: 'POST',
         body: JSON.stringify ({
-          nome: this.nome, preco: this.preco, img: this.img
+          nome: this.nome, preco: this.preco
         }),
         headers: {
           'Content-Type': 'application/json'
