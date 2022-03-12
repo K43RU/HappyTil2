@@ -1,0 +1,13 @@
+table{
+    align-items: center;
+    border: 1px solid black;
+    width: 400px;
+}
+
+tr{
+    border: 1px solid black;
+}
+
+td{
+    border: 1px solid black;
+}

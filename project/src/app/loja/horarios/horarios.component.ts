@@ -11,11 +11,14 @@ export class HorariosComponent implements OnInit {
 
   pet = '';
   especie = '';
-  data = '';
-  hora = '';
+  data = undefined;
+  hora = undefined;
+
+  lista = [];
 
   marcar(){
     console.log(this.pet);
+    
     fetch('/api/marcar_horario',
     {
         method: 'POST',
@@ -30,11 +33,12 @@ export class HorariosComponent implements OnInit {
     }
    ).then(function (result){
     return result.json();
-    }).then(function (dados){
+    }).then((dados) => {
     console.log(dados);
     }).catch(function(erro){
     console.log(erro)
     })
+  
     this.pet = '';
     this.especie = '';
     this.data = '';
@@ -42,6 +46,21 @@ export class HorariosComponent implements OnInit {
   }
 
   ngOnInit() {
+    fetch('/api/buscar_horario',
+    {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+).then((result) => {
+    return result.json();
+}).then((dados) => {
+    console.log(dados);
+    this.lista = dados.list;
+}).catch((erro) => {
+    console.log(erro)
+})
   }
 
 }

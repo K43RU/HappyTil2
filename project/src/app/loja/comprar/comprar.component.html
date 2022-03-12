@@ -9,4 +9,12 @@
     <button (click)="cadastroProduto()">cadastrar</button>
   </div>
 
+  <div *ngFor="let prod of lista">
+    {{prod.nome}}   R${{prod.preco}}   <button (click)="add()">adicionar ao carrinho</button>
+  </div>
+
+  <div *ngFor="let item of lista">
+    {{item.NOME}}
+  </div>
+
 </body>
