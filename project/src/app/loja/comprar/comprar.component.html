@@ -5,16 +5,13 @@
     cadadastro de produtos:
     <input placeholder="nome" [(ngModel)]="nome">
     <input placeholder="preco" type="number" [(ngModel)]="preco">
-    <input type="file" [(ngModel)]="img">
+    <input type="file" [(ngModel)]="img"
+    (change)="mudanca($event.target.files[0])">
     <button (click)="cadastroProduto()">cadastrar</button>
   </div>
 
-  <div *ngFor="let prod of lista">
-    {{prod.nome}}   R${{prod.preco}}   <button (click)="add()">adicionar ao carrinho</button>
-  </div>
-
   <div *ngFor="let item of lista">
-    {{item.NOME}}
+   <img [src]=item.IMG> {{item.NOME}} R${{item.PRECO}} <button (click)="add()">adicionar ao carrinho</button>
   </div>
 
 </body>

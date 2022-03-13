@@ -12,7 +12,8 @@ export class ComprarComponent implements OnInit {
 
   nome = '';
   preco = '';
-  img = '';
+  img = undefined;
+  img64 = undefined;
   listao = [];
 
   lista = [{nome: "shampoo", preco: 10}, {nome: "ração", preco: 75}, {nome: "kit brinquedos", preco: 100}]
@@ -22,7 +23,7 @@ export class ComprarComponent implements OnInit {
       {
         method: 'POST',
         body: JSON.stringify ({
-          nome: this.nome, preco: this.preco
+          nome: this.nome, preco: this.preco, img: this.img64
         }),
         headers: {
           'Content-Type': 'application/json'
@@ -41,25 +42,32 @@ export class ComprarComponent implements OnInit {
     this.preco = '';
   }
 
-  ngOnInit() {
-      fetch('/api/buscar_prod',
-        {
-          method: 'POST',
-          body: JSON.stringify ({
-            nome: this.nome, preco: this.preco, img: this.img
-          }),
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        }
-      ).then(function (result) {
-        return result.json();
-      }).then(function (dados) {
-        console.log(dados);
-        this.lista = dados.list
-      }).catch(function (erro) {
-        console.log(erro)
-      })
+  mudanca(file) {
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      this.img64 = reader.result;
+    };
+    reader.onerror = (error) => {
+      console.log('Error: ', error);
+    };
   }
 
+  ngOnInit() {
+    fetch('/api/buscar_prod',
+    {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+).then((result) => {
+    return result.json();
+}).then((dados) => {
+    console.log(dados);
+    this.lista = dados.list;
+}).catch((erro) => {
+    console.log(erro)
+})
+  }
 }
