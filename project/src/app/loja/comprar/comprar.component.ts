@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { locateHostElement } from '@angular/core/src/render3/instructions';
 import { providerDef } from '@angular/core/src/view';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-comprar',
@@ -8,15 +10,13 @@ import { providerDef } from '@angular/core/src/view';
 })
 export class ComprarComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router: Router ) { }
 
   nome = '';
   preco = '';
   img = undefined;
   img64 = undefined;
-  listao = [];
-
-  lista = [{nome: "shampoo", preco: 10}, {nome: "ração", preco: 75}, {nome: "kit brinquedos", preco: 100}]
+  lista = [];
 
   cadastroProduto() {
     fetch('/api/cadastroProd',
@@ -31,15 +31,16 @@ export class ComprarComponent implements OnInit {
       }
     ).then(function (result) {
       return result.json();
-    }).then(function (dados) {
+    }).then(function setTim(dados) {
+      alert(this.nome + " está na lista de itens a serem aprovados");
       console.log(dados);
     }).catch(function (erro) {
       console.log(erro)
     })
-    alert(this.nome + " está na lista de itens a serem aprovados");
     this.nome = '';
     this.img = '';
     this.preco = '';
+    this.router.navigate(['//'])
   }
 
   mudanca(file) {

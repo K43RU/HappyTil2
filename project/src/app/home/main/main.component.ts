@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class MainComponent implements OnInit {
 
-  constructor( private router: Router) { }
+  constructor( private router: Router ) { }
 
   nome = localStorage.getItem('nome');
   email = localStorage.getItem('email');

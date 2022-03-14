@@ -30,16 +30,3 @@ inserirRota('/buscar_prod', function (dados, resposta) {
         });
 
 });
-
-inserirRota('/buscar_prod', function (dados, resposta) {
-    console.log(dados)
-    database(`SELECT * FROM PROD_APROVAR`)
-        .then(result => {
-            console.log('usuario buscado com sucesso');
-            resposta({ list: result });
-        }).catch(erro => {
-            console.log('erro ao buscar usuário');
-            resposta({ erro: 'erro ao buscar o usuário!' })
-        });
-    
-});

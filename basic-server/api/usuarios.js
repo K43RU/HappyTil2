@@ -49,6 +49,7 @@ inserirRota('/criar_usuario', function name(dados, resposta) {
     });
 })
 
+
 // fetch('/api/buscar_usuario',
 //     {
 //         method: 'POST',
