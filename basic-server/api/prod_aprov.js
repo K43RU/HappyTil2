@@ -30,3 +30,16 @@ inserirRota('/buscar_prod', function (dados, resposta) {
         });
 
 });
+
+inserirRota('/buscar_produtao', function (dados, resposta, idProduto) {
+    console.log(dados)
+    database(`SELECT * FROM PROD_APROVAR WHERE NOME == idProduto`)
+        .then(result => {
+            console.log('produto buscado com sucesso');
+            resposta({ list: result });
+        }).catch(erro => {
+            console.log('erro ao buscar produto');
+            resposta({ erro: 'erro ao buscar o produto!' })
+        });
+
+});

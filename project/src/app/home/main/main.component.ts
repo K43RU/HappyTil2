@@ -21,6 +21,10 @@ export class MainComponent implements OnInit {
     this.router.navigate(['/loja/']);
   }
 
+  irPets(){
+    this.router.navigate(['/loja/pets'])
+  }
+
   irCarrinho(){
     this.router.navigate(['/loja/carrinho']);
   }

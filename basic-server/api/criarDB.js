@@ -39,7 +39,7 @@ database(`CREATE TABLE IF NOT EXISTS PRODUTOS (
     ID INTEGER PRIMARY KEY AUTOINCREMENT,
     NOME varchar(30),
     PRECO varchar(30),
-    IMG varchar(9999999)
+    IMG varchar(9999999999)
     )`).then(result => {
     console.log('tabela criada')
 }).catch(erro => {
@@ -50,7 +50,10 @@ database(`CREATE TABLE IF NOT EXISTS PRODUTOS (
 database(`CREATE TABLE IF NOT EXISTS PROD_APROVAR (
     ID INTEGER PRIMARY KEY AUTOINCREMENT,
     NOME varchar(30),
-    PRECO varchar(30)
+    PRECO int,
+    IMG varchar(9999999999),
+    ID_USER INTEGER,
+    FOREIGN KEY (ID_USER) REFERENCES USER (ID)
     )`).then(result => {
     console.log('tabela criada')
 }).catch(erro => {
@@ -58,11 +61,11 @@ database(`CREATE TABLE IF NOT EXISTS PROD_APROVAR (
     console.log('falha');
 });
 
-database(`CREATE TABLE IF NOT EXISTS PROD_APROVAR (
+database(`CREATE TABLE IF NOT EXISTS CARRINHO (
     ID INTEGER PRIMARY KEY AUTOINCREMENT,
     NOME varchar(30),
-    PRECO varchar(30),
-    IMG varchar(9999999),
+    PRECO int,
+    IMG varchar(9999999999),
     ID_USER INTEGER,
     FOREIGN KEY (ID_USER) REFERENCES USER (ID)
     )`).then(result => {

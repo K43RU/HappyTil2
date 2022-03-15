@@ -11,7 +11,11 @@
   </div>
 
   <div *ngFor="let item of lista">
-   <img [src]=item.IMG> {{item.NOME}} R${{item.PRECO}} <button (click)="add()">adicionar ao carrinho</button>
+  <img [src]=item.IMG>  
+  {{item.NOME}} 
+  R${{item.PRECO}} 
+  <button (click)="add()">adicionar ao carrinho</button>
+  <button (click)="comprar(item)">comprar</button>
   </div>
 
 </body>

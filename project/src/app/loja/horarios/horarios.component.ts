@@ -43,6 +43,7 @@ export class HorariosComponent implements OnInit {
     this.especie = '';
     this.data = '';
     this.hora = '';
+    location.reload();
   }
 
   ngOnInit() {
