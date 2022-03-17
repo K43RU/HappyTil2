@@ -45,6 +45,7 @@ export class CadastroComponent implements OnInit {
                 
                 localStorage.setItem('img', dados.user.IMG);
                 localStorage.setItem('email', dados.user.EMAIL);
+                localStorage.setItem('IdUser', dados.user.ID);
                 this.router.navigate(['/home/']);
                 }
                 console.log(dados);

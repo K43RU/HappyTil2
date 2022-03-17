@@ -122,18 +122,13 @@ body{
     border-bottom: 1px black solid;
 }
 
-#iguana{
-    position: fixed;
-    margin-top: 35%;
-    margin-left: 75%;
-}
 
 #logo{
     justify-content: center;
     align-items: center;
     position: fixed;
-    margin-top: 40%;
-    margin-right: 2vw;
+    bottom: 0;
+    margin-bottom: 15px;
     display: flex;
     font-weight: 700;
     font-size: 20px;

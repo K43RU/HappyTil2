@@ -1,7 +1,7 @@
 inserirRota('/adicionarCarrinho', function name(dados, resposta) {
     console.log(dados);
 
-    database(`INSERT INTO CARRINHO (NOME, PRECO, IMG) VALUES ("${dados.nome}", "${dados.preco}")`).then(result => {
+    database(`INSERT INTO CARRINHO (NOME, PRECO, IMG, ID_USER) VALUES ("${dados.nome}", "${dados.preco}", "${dados.img}", "${dados.id_user}")`).then(result => {
         console.log('produto inserido com sucesso');
         resposta({ message: 'produto inserido com sucesso!' });
     }).catch(erro => {

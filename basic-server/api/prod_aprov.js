@@ -31,9 +31,9 @@ inserirRota('/buscar_prod', function (dados, resposta) {
 
 });
 
-inserirRota('/buscar_produtao', function (dados, resposta, idProduto) {
+inserirRota('/buscar_produtao', function (dados, resposta) {
     console.log(dados)
-    database(`SELECT * FROM PROD_APROVAR WHERE NOME == idProduto`)
+    database(`SELECT * FROM PROD_APROVAR WHERE NOME == "${dados.nome}"`)
         .then(result => {
             console.log('produto buscado com sucesso');
             resposta({ list: result });
