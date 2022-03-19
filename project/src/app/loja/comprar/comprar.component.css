@@ -46,16 +46,19 @@ body{
     transition: 0.2s;
     background-color: rgb(87, 87, 87);
     color: white;
+    transition: 0.3s;
 }
 
 #prodInfo:hover #info #add:hover{
     cursor: pointer;
     border-radius: 30px;
+    transition: 0.3s;
 }
 
 #prodInfo:hover #info #comprar:hover{
     cursor: pointer;
     border-radius: 30px;
+    transition: 0.3s;
 }
 
 #prodInfo:hover #info #comprar{
@@ -67,7 +70,7 @@ body{
     height: 40px;
     background-color: #ffd000;
     font-size: 15px;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 .prodImg{
