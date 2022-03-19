@@ -18,42 +18,6 @@ export class ComprarComponent implements OnInit {
   img64 = undefined;
   lista = [];
 
-  mudanca(file) {
-    var reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => {
-      this.img64 = reader.result;
-    };
-    reader.onerror = (error) => {
-      console.log('Error: ', error);
-    };
-  }
-
-  cadastroProduto() {
-    fetch('/api/cadastroProd',
-      {
-        method: 'POST',
-        body: JSON.stringify({
-          nome: this.nome, preco: this.preco, img: this.img64
-        }),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      }
-    ).then((result) => {
-      return result.json();
-    }).then((dados) => {
-      alert(this.nome + " está na lista de itens a serem aprovados");
-      console.log(dados);
-    }).catch((erro) => {
-      console.log(erro)
-    })
-    this.nome = '';
-    this.img = '';
-    this.preco = '';
-    location.reload();
-  }
-
   add() {}
 
   ngOnInit() {
@@ -76,6 +40,10 @@ export class ComprarComponent implements OnInit {
 
   comprar(item) {
     this.router.navigate(['/loja/', item.NOME]);
+  }
+
+  aaa(){
+    this.router.navigate(['/loja/add'])
   }
 
 }

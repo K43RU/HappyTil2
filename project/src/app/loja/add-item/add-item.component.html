@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div id="produtos">
+    cadadastro de produtos:
+    <input placeholder="nome" [(ngModel)]="nome">
+    <input placeholder="preco" type="number" [(ngModel)]="preco">
+    <input type="file" [(ngModel)]="img"
+    (change)="mudanca($event.target.files[0])">
+  <button (click)="cadastroProduto()">cadastrar</button>
+  </div>
+</body>
+</html>

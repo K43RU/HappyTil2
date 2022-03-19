@@ -8,6 +8,7 @@ import { Routes, RouterModule } from '@angular/router';
 import CheckLogged from '../checkLogged.canactivate';
 import { PetsComponent } from './pets/pets.component';
 import { ProdutoComponent } from './produto/produto.component';
+import { AddItemComponent } from './add-item/add-item.component';
 
 const routes: Routes = [{
   path: 'loja', canActivate: [CheckLogged],children: [
@@ -15,6 +16,7 @@ const routes: Routes = [{
     {path: 'carrinho', component: CarrinhoComponent},
     {path: 'horarios', component: HorariosComponent},
     {path: 'pets', component: PetsComponent},
+    {path: 'add', component: AddItemComponent},
     {path: ':id', component: ProdutoComponent}
   ]
 }]
@@ -25,7 +27,7 @@ const routes: Routes = [{
     RouterModule.forRoot(routes),
     FormsModule
   ],
-  declarations: [ComprarComponent, HorariosComponent, CarrinhoComponent, PetsComponent, ProdutoComponent],
+  declarations: [ComprarComponent, HorariosComponent, CarrinhoComponent, PetsComponent, ProdutoComponent, AddItemComponent],
   exports: [ ComprarComponent, HorariosComponent, CarrinhoComponent ]
 })
 

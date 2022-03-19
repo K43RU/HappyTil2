@@ -1,21 +1,21 @@
 <body>
-  <header id="header"></header>
-
-  <div id="produtos">
-    cadadastro de produtos:
-    <input placeholder="nome" [(ngModel)]="nome">
-    <input placeholder="preco" type="number" [(ngModel)]="preco">
-    <input type="file" [(ngModel)]="img"
-    (change)="mudanca($event.target.files[0])">
-    <button (click)="cadastroProduto()">cadastrar</button>
-  </div>
-
   <div *ngFor="let item of lista">
-  <img [src]=item.IMG>  
-  {{item.NOME}} 
-  R${{item.PRECO}} 
-  <button (click)="add()">adicionar ao carrinho</button>
-  <button (click)="comprar(item)">comprar</button>
+  <div id="prodInfo">
+      <img class="prodImg" [src]=item.IMG>  
+      <div id="img"></div>
+      <div class="preco">
+    R${{item.PRECO}} 
   </div>
-
+      <div id="info">
+  {{item.NOME}}
+  <div id="buttons">
+  <button id="add" (click)="add()">adicionar ao carrinho</button>
+  <button id="comprar" (click)="comprar(item)">comprar</button>
+</div>
+</div>
+  </div>
+  </div>
+<div id="divAdd">
+  <button id="add" (click)="aaa()">adicionar um item</button>
+</div>
 </body>
