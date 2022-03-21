@@ -1,4 +1,13 @@
 <body>
+  <div id="header">
+    <div id="rotas">
+      <button (click)='irLoja()' class="rota">loja</button>
+      <button (click)='irCarrinho()' class="rota">carrinho</button>
+      <button class="rota" (click)='irPets()'>pets</button>
+      <button (click)='irHorarios()' class="rota">marque um horário</button>
+    </div>
+    </div>
+
   <div *ngFor="let item of lista">
   <div id="prodInfo">
       <img class="prodImg" [src]=item.IMG>  
@@ -16,6 +25,6 @@
   </div>
   </div>
 <div id="divAdd">
-  <button id="add" (click)="aaa()">adicionar um item</button>
+  <button id="addItem" (click)="aaa()">adicionar um item</button>
 </div>
 </body>

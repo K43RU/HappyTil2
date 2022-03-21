@@ -112,3 +112,44 @@ body{
     display: grid;
     justify-content: center;
 }
+
+#addItem{
+    margin-top: 20px;
+    border: none;
+    width: 140px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+#header{
+    background-color: rgb(26, 26, 26);
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    transition: 1s;
+}
+
+#rotas{
+    display: flex;
+    align-items: center;
+}
+
+.rota{
+    border: none;
+    width: 115px;
+    height: 75px;
+    font-size: 13px;
+    font-weight: 700;
+    border: none;
+    color: #ffd000;
+    background-color: rgb(26, 26, 26);
+    justify-content: center;
+    align-items: center;
+}
+
+.rota:hover{
+    color: white;
+    border-bottom: white 3px solid;
+}
