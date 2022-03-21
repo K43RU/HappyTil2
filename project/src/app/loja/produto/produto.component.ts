@@ -13,7 +13,6 @@ export class ProdutoComponent implements OnInit {
   idUser = localStorage.getItem('IdUser');
 
   nomeProd = localStorage.getItem('nomeProd');
-
   constructor(private route: ActivatedRoute) {
     this.idProduto = route.snapshot.paramMap.get('id');
   }
@@ -23,6 +22,7 @@ export class ProdutoComponent implements OnInit {
       {
         method: 'POST',
         body: JSON.stringify({
+          id: this.idProduto
         })
         ,
         headers: {
@@ -42,11 +42,12 @@ export class ProdutoComponent implements OnInit {
 
   ngOnInit() {
 
+
     fetch('/api/buscar_produtao',
       {
         method: 'POST',
         body: JSON.stringify({
-          nome: this.idProduto
+          id: this.idProduto
         })
         ,
         headers: {

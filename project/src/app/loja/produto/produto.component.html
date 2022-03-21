@@ -2,10 +2,19 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <div *ngFor="let item of lista">
-      <img [src]=item.IMG> {{item.NOME}} {{item.PRECO}}
-      {{nomeProd}}
+    <div id="Prod" *ngFor="let item of lista">
+      <img id="img" [src]=item.IMG>
+      <div id="infoProd">
+      <div class="nome">{{item.NOME}}</div>
+      <div class="preco">R${{item.PRECO}}</div>
+      <div id="btns">
+        <button  id="addCarrinho" (click)="add()">adicionar ao carrinho</button>
+        <button  id="confirmar" (click)="add()">confirmar compra</button>
+      </div>
     </div>
-    <button (click)="add()">adicionar ao carrinho</button>
+    
+    </div>
+    
+    
 </body>
 </html>
