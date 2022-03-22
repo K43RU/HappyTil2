@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+}
+
+body{
+    background-color: #ffd000;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#img{
+    width: 250px;
+    height: 370px;
+    border-radius: 10px;
+}
+
+#Prod{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    background-color: rgb(206, 206, 206);
+    padding: 10px;
+    width: 500px;
+    height: 370px;
+    border-radius: 10px;
+}
+
+#infoProd{
+    justify-content: center;
+    align-items: start;
+    height: 100%;
+    margin: 10px;
+}
+
+#btns{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#addCarrinho{
+    transition: 0.3s;
+    margin-bottom: 137%;
+    border: none;
+    border-radius: 5px;
+    width: 80px;
+    height: 35px;
+    background-color: white;
+}
+
+#addCarrinho:hover{
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+#confirmar{
+    transition: 0.3s;
+    margin-bottom: 137%;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 145px;
+    height: 35px;
+    background-color: #ffd000;
+}
+
+#confirmar:hover{
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.nome{
+    font-size: 20px;
+}
+
+.preco{
+    font-size: 18px;
+    color: rgb(44, 44, 44);
+}
+
+#qtd{
+    transition: 0.3s;
+    border: none;
+    width: 60px;
+    border-radius: 3px;
+    padding: 2px;
+}
+
+#qtd:hover{
+    transition: 0.3s;
+    width: 90px;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+#qtd:focus{
+    transition: 0.3s;
+    width: 90px;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+#valorTotal{
+    height: 64%;
+    display: flex;
+    align-items: flex-end;
+}
+
+#carrinho{
+    width: 30px;
+    height: 30px;
+}

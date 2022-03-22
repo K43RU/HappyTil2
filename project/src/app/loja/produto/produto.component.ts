@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { prependOnceListener } from 'process';
 
 @Component({
   selector: 'app-produto',
@@ -8,21 +9,26 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProdutoComponent implements OnInit {
 
+  quantidade = [1, 2, 3, 4, 5, 6 ,7 ,8 ,9, 10];
+  qtd = 1;
   idProduto = '';
   lista = [];
   idUser = localStorage.getItem('IdUser');
+  
+  
 
   nomeProd = localStorage.getItem('nomeProd');
-
   constructor(private route: ActivatedRoute) {
-    this.idProduto = route.snapshot.paramMap.get('id');
+  this.idProduto = route.snapshot.paramMap.get('id');
   }
 
   add() {
-    fetch('/api/adicionar_carrinho',
+
+    fetch('/api/adicionarCarrinho',
       {
         method: 'POST',
         body: JSON.stringify({
+          id: this.idProduto, nome: this.nome, preco: this.preco, img: this.img, id_user: this.idUser
         })
         ,
         headers: {
@@ -40,13 +46,18 @@ export class ProdutoComponent implements OnInit {
 
   }
 
+  nome = '';
+  img = undefined;
+  preco = '';
+
   ngOnInit() {
+
 
     fetch('/api/buscar_produtao',
       {
         method: 'POST',
         body: JSON.stringify({
-          nome: this.idProduto
+          id: this.idProduto
         })
         ,
         headers: {
@@ -58,6 +69,9 @@ export class ProdutoComponent implements OnInit {
     }).then((dados) => {
       console.log(dados);
       this.lista = dados.list;
+      this.nome = dados.NOME;
+      this.img = dados.IMG;
+      this.preco = dados.PRECO;
     }).catch((erro) => {
       console.log(erro)
     })

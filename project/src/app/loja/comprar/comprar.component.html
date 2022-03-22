@@ -1,4 +1,17 @@
 <body>
+  <div id="header">
+    <div id="rotas">
+      <button (click)='irHome()' class="rota">home</button>
+      <button (click)='irCarrinho()' class="rota">carrinho</button>
+      <button class="rota" (click)='irPets()'>pets</button>
+      <button (click)='irHorarios()' class="rota">marque um horário</button>
+    </div>
+    <div id="divAdd">
+      <button id="addItem" (click)="aaa()">adicionar um item</button>
+    </div>
+    </div>
+
+    <div id="Produtos">
   <div *ngFor="let item of lista">
   <div id="prodInfo">
       <img class="prodImg" [src]=item.IMG>  
@@ -17,5 +30,6 @@
   </div>
   <div id="divAdd">
     <button id="adicionar" (click)="aaa()">adicionar um item</button>
-  </div>
+  </div>]
+</div>]
 </body>

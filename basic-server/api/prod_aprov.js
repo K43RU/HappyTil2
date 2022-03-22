@@ -33,7 +33,7 @@ inserirRota('/buscar_prod', function (dados, resposta) {
 
 inserirRota('/buscar_produtao', function (dados, resposta) {
     console.log(dados)
-    database(`SELECT * FROM PROD_APROVAR WHERE NOME == "${dados.nome}"`)
+    database(`SELECT * FROM PROD_APROVAR WHERE ID == "${dados.id}"`)
         .then(result => {
             console.log('produto buscado com sucesso');
             resposta({ list: result });

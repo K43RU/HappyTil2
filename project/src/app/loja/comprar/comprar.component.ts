@@ -18,6 +18,22 @@ export class ComprarComponent implements OnInit {
   img64 = undefined;
   lista = [];
 
+  irHome(){
+    this.router.navigate(['/home/']);
+  }
+
+  irPets(){
+    this.router.navigate(['/loja/pets'])
+  }
+
+  irCarrinho(){
+    this.router.navigate(['/loja/carrinho']);
+  }
+
+  irHorarios(){
+    this.router.navigate(['/loja/horarios']);
+  }
+
   add() {}
 
   ngOnInit() {
@@ -39,7 +55,7 @@ export class ComprarComponent implements OnInit {
   }
 
   comprar(item) {
-    this.router.navigate(['/loja/', item.NOME]);
+    this.router.navigate(['/loja/', item.ID]);
   }
 
   aaa(){
