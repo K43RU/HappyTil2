@@ -112,3 +112,10 @@ body{
     display: grid;
     justify-content: center;
 }
+
+#adicionar{
+    border: none;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+}
