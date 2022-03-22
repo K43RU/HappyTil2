@@ -7,9 +7,23 @@
       <div id="infoProd">
       <div class="nome">{{item.NOME}}</div>
       <div class="preco">R${{item.PRECO}}</div>
+      <div id="quantidade">
+      quantidade:
+      <select id="qtd" [(ngModel)]="qtd">
+        <option *ngFor="let num of quantidade">{{num}}</option>
+      </select>
+    </div>
+
+    <div id="valorTotal" *ngFor="let item of lista">
+      Valor total:<br>
+      R$ {{qtd * item.PRECO}}
+    </div>
+
       <div id="btns">
-        <button  id="addCarrinho" (click)="add()">adicionar ao carrinho</button>
-        <button  id="confirmar" (click)="add()">confirmar compra</button>
+        <button  id="addCarrinho" (click)="add()" title="adicionar ao carrinho">
+          <img id="carrinho" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/344/external-shopping-cart-ecommerce-kiranshastry-solid-kiranshastry.png">
+        </button>
+        <button  id="confirmar">confirmar compra</button>
       </div>
     </div>
     

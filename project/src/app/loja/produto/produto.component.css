@@ -12,6 +12,7 @@ body{
     display: grid;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 #img{
@@ -28,6 +29,7 @@ body{
     padding: 10px;
     width: 500px;
     height: 370px;
+    border-radius: 10px;
 }
 
 #infoProd{
@@ -39,28 +41,30 @@ body{
 
 #btns{
     height: 100%;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
 
 #addCarrinho{
-    margin-bottom: 22%;
+    transition: 0.3s;
+    margin-bottom: 137%;
     border: none;
     border-radius: 5px;
-    width: 145px;
+    width: 80px;
     height: 35px;
     background-color: white;
 }
 
 #addCarrinho:hover{
+    cursor: pointer;
     border-radius: 30px;
     transition: 0.3s;
 }
 
 #confirmar{
-    margin-bottom: 22%;
+    transition: 0.3s;
+    margin-bottom: 137%;
     margin-left: 10px;
     border: none;
     border-radius: 5px;
@@ -70,6 +74,7 @@ body{
 }
 
 #confirmar:hover{
+    cursor: pointer;
     border-radius: 30px;
     transition: 0.3s;
 }
@@ -81,4 +86,37 @@ body{
 .preco{
     font-size: 18px;
     color: rgb(44, 44, 44);
+}
+
+#qtd{
+    transition: 0.3s;
+    border: none;
+    width: 60px;
+    border-radius: 3px;
+    padding: 2px;
+}
+
+#qtd:hover{
+    transition: 0.3s;
+    width: 90px;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+#qtd:focus{
+    transition: 0.3s;
+    width: 90px;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+#valorTotal{
+    height: 64%;
+    display: flex;
+    align-items: flex-end;
+}
+
+#carrinho{
+    width: 30px;
+    height: 30px;
 }
