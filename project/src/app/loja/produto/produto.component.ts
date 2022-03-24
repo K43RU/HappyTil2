@@ -1,5 +1,5 @@
 import { Component, NgModule, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { prependOnceListener } from 'process';
 
 @Component({
@@ -13,12 +13,14 @@ export class ProdutoComponent implements OnInit {
   qtd = 1;
   idProduto = '';
   lista = [];
+  lista2 = [];
   idUser = localStorage.getItem('IdUser');
   
   
 
   nomeProd = localStorage.getItem('nomeProd');
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute,
+              private router: Router) {
   this.idProduto = route.snapshot.paramMap.get('id');
   }
 
@@ -52,6 +54,25 @@ export class ProdutoComponent implements OnInit {
 
   ngOnInit() {
 
+    fetch('/api/buscar_produt',
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          id: this.idProduto
+        })
+        ,
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+    ).then((result) => {
+      return result.json();
+    }).then((dados) => {
+      console.log(dados);
+      this.lista2 = dados.list;
+    }).catch((erro) => {
+      console.log(erro)
+    })
 
     fetch('/api/buscar_produtao',
       {
@@ -76,6 +97,14 @@ export class ProdutoComponent implements OnInit {
       console.log(erro)
     })
 
+  }
+
+
+  comprar(item) {
+    this.router.navigate(['/loja/', item.ID]);
+    window.setTimeout(function() {
+      location.reload();
+  }, 100);
   }
 
 }

@@ -9,24 +9,26 @@
     <div id="divAdd">
       <button id="addItem" (click)="aaa()">adicionar um item</button>
     </div>
-    </div>
+  </div>
 
-    <div id="Produtos">
-  <div *ngFor="let item of lista">
-  <div id="prodInfo">
-      <img class="prodImg" [src]=item.IMG>  
-      <div id="img"></div>
-      <div class="preco">
-    R${{item.PRECO}} 
+  <div id="legal">
+  <div id="produto">
+    <div id="Produtos" *ngFor="let item of lista">
+        <div id="prodInfo">
+          <img class="prodImg" [src]=item.IMG>
+          <div id="img"></div>
+          <div class="preco">
+            R${{item.PRECO}}
+          </div>
+          <div id="info">
+            {{item.NOME}}
+            <div id="buttons">
+              <button id="add" (click)="add()">adicionar ao carrinho</button>
+              <button id="comprar" (click)="comprar(item)">comprar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-      <div id="info">
-  {{item.NOME}}
-  <div id="buttons">
-  <button id="add" (click)="add()">adicionar ao carrinho</button>
-  <button id="comprar" (click)="comprar(item)">comprar</button>
-</div>
-</div>
-  </div>
-  </div>
-</div>
 </body>

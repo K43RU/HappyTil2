@@ -26,9 +26,18 @@
         <button  id="confirmar">confirmar compra</button>
       </div>
     </div>
-    
     </div>
     
-    
+    <div id="lista">
+  <div id="produtos">
+            <div id="produtinho" *ngFor="let item of lista2"> 
+            <div id="nomezinho">{{item.NOME}}</div>
+            <div id="infoProds">
+            <img id="imgProdutos" [src]=item.IMG>
+            <button id="visitar" (click)="comprar(item)">visitar</button> 
+          </div>
+      </div>
+  </div>
+    </div>
 </body>
 </html>
