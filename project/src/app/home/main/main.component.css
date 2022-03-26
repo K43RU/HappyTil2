@@ -91,6 +91,7 @@ body{
     position: fixed;
     border-radius: 50%;
     margin-top: -9%;
+    object-fit: cover;
 }
 
 #logout{
