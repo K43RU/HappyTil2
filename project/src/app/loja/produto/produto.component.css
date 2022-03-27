@@ -5,6 +5,29 @@
     font-weight: 600;
 }
 
+[aria-label]:hover::after {
+    display: block;
+}
+
+[aria-label]{
+    position: relative;
+}
+
+[aria-label]::after{
+    content: attr(aria-label);
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0px;
+    z-index: 5000;
+    pointer-events: none;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-size: .9em;
+    color: #fff;
+    background-color: #585858;
+}
+
 body{
     background-color: #ffd000;
     width: 100%;
