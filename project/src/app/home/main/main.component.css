@@ -161,7 +161,7 @@ body{
 #anuncio{
     width: 100%;
     height: 20vh;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
 }
@@ -181,16 +181,32 @@ body{
     z-index: 10;
 }
 
+ul{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .slider li:nth-child(1) label {
     left: 10px;
+    border-radius: 50%;
+}
+
+.slider label:checked{
+    left: 10px;
+    background-color: #ffd000;
+    color: #ffd000;
 }
 
 .slider li:nth-child(2) label {
     left: 40px;
+    border-radius: 50%;
 }
 
 .slider li:nth-child(3) label {
     left: 70px;
+    border-radius: 50%;
 }
 
 .slider img {
