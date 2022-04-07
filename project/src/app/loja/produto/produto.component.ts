@@ -30,7 +30,7 @@ export class ProdutoComponent implements OnInit {
       {
         method: 'POST',
         body: JSON.stringify({
-          id: this.idProduto, nome: this.nome, preco: this.preco, img: this.img, id_user: this.idUser
+          id_prod: this.idProduto, id_user: this.idUser
         })
         ,
         headers: {

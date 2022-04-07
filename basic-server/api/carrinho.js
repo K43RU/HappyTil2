@@ -1,7 +1,7 @@
 inserirRota('/adicionarCarrinho', function name(dados, resposta) {
     console.log(dados);
 
-    database(`INSERT INTO CARRINHO (ID, NOME, PRECO, IMG, ID_USER) VALUES ("${dados.id}", "${dados.nome}", "${dados.preco}", "${dados.img}", "${dados.id_user}")`).then(result => {
+    database(`INSERT INTO CARRINHO (ID_USER, ID_PROD) VALUES ("${dados.id_user}", "${dados.id_prod}")`).then(result => {
         console.log('produto inserido com sucesso');
         resposta({ message: 'produto inserido com sucesso!' });
     }).catch(erro => {
@@ -12,8 +12,12 @@ inserirRota('/adicionarCarrinho', function name(dados, resposta) {
 
 inserirRota('/buscarCarrinho', function (dados, resposta) {
     console.log(dados)
-    database(`SELECT * FROM CARRINHO
-    WHERE ID == "${dados.id}" or ID_USER == "${dados.id_user}"`)
+    database(`SELECT CARRINHO.ID, CARRINHO.ID_USER, CARRINHO.ID_PROD, PROD_APROVAR.NOME, PROD_APROVAR.IMG, PROD_APROVAR.PRECO FROM CARRINHO
+    LEFT JOIN PROD_APROVAR
+    ON CARRINHO.ID_PROD == PROD_APROVAR.ID
+    WHERE CARRINHO.ID_USER == "${dados.idUser}"
+    `
+    )
         .then(result => {
             console.log('produto buscado com sucesso');
             resposta({ list: result });
