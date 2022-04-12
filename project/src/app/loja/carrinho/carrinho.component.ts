@@ -85,7 +85,7 @@ export class CarrinhoComponent implements OnInit {
   }
 
   comprar(item) {
-    this.router.navigate(['/loja/', item.ID]);
+    this.router.navigate(['/loja/', item.ID_PROD]);
   }
 
   aaa(){

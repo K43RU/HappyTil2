@@ -23,13 +23,9 @@ export class CadastroComponent implements OnInit {
               socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
             }
             
-            
             this.socialAuthService.signIn(socialPlatformProvider).then(
               (userData) => {
                 console.log(socialPlatform+" sign in data : " , userData);
-                // Now sign-in with userData
-                // ...
-                    
               }
             );
           }

@@ -258,3 +258,38 @@ body{
     width: 280px;
     border-radius: 30px;
 }
+
+#search{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(54, 54, 54);
+    display: flex;
+    align-items: center;
+}
+
+#pesquisa{
+    border: none;
+    margin-left: 5px;
+    outline: none;
+    padding: 6px;
+}
+
+#pesquisar{
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+#pesquisar:hover{
+    cursor: pointer;
+}
+
+#sos{
+    margin-left: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}

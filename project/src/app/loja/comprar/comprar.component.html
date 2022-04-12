@@ -11,13 +11,11 @@
     </div>
   </div>
 
-  <div>
-    <input [(ngModel)]="pequisa">
-    <button (click)="pesquisar()">pesquisar</button>
-  </div>
-
-  <div *ngFor="let item of lista2">
-    {{item.NOME}}
+  <div id="search">
+    <div id="sos">
+      <input [(ngModel)]="pesquisa" id="pesquisa" placeholder="pesquisa...">
+      <button (click)="pesquisar()" id="pesquisar"><img style="width: 22px; height: 22px;" src="https://icones.pro/wp-content/uploads/2021/06/icone-loupe-noir.png"></button>
+    </div>
   </div>
 
   <div id="nenhum" *ngIf="i <= 0">

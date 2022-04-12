@@ -59,7 +59,7 @@ inserirRota('/buscar_produt', function (dados, resposta) {
 
 inserirRota('/pesquisar', function (dados, resposta) {
     console.log(dados)
-    database(`SELECT * FROM PROD_APROVAR WHERE NOME LIKE("%${dados.nome}%")`)
+    database(`SELECT * FROM PROD_APROVAR WHERE NOME LIKE "%${dados.nome}%" `)
         .then(result => {
             console.log('produto buscado com sucesso');
             resposta({ list: result });

@@ -14,7 +14,6 @@ export class ComprarComponent implements OnInit {
 
   id = localStorage.getItem('IdUser');
   pesquisa = '';
-  lista2 = [];
   nome = '';
   preco = '';
   img = undefined;
@@ -54,8 +53,8 @@ export class ComprarComponent implements OnInit {
       return result.json();
     }).then((dados) => {
       console.log(dados);
-      this.lista2 = dados.list;
-      if(this.lista2.length != 0){
+      this.lista = dados.list;
+      if(this.lista.length != 0){
         this.i++;
       }
     }).catch((erro) => {

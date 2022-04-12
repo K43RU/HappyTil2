@@ -9,17 +9,14 @@ table{
     align-items: center;
     border: 1px solid black;
     width: 400px;
-    background-color: purple;
 }
 
 tr{
     border: 1px solid black;
-    background-color: rgb(161, 0, 161);
 }
 
 td{
     border: 1px solid black;
-    background-color: rgb(255, 93, 255);
 }
 
 body{
