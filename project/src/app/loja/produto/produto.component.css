@@ -5,6 +5,40 @@
     font-weight: 600;
 }
 
+#header{
+    background-color: rgb(26, 26, 26);
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    transition: 1s;
+    border-bottom: 3px solid rgb(66, 66, 66);
+}
+
+#rotas{
+    display: flex;
+    align-items: center;
+}
+
+.rota{
+    border: none;
+    width: 115px;
+    height: 75px;
+    font-size: 13px;
+    font-weight: 700;
+    border: none;
+    color: #ffd000;
+    background-color: rgb(26, 26, 26);
+    justify-content: center;
+    align-items: center;
+}
+
+.rota:hover{
+    color: white;
+    border-bottom: white 3px solid;
+}
+
 [aria-label]:hover::after {
     display: block;
 }

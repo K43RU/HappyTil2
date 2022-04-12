@@ -1,0 +1,28 @@
+<body>
+  <div id="header">
+    <div id="rotas">
+      <button (click)='home()' class="rota">home</button>
+      <button (click)='irCarrinho()' class="rota">carrinho</button>
+      <button class="rota" (click)='irPets()'>pets</button>
+      <button (click)='irHorarios()' class="rota">marque um horário</button>
+    </div>
+  </div>
+
+  <div id="inputs">
+    nome:
+    <input placeholder="nome do pet" class="nome" [(ngModel)]="pet">
+    espécie:
+    <select [(ngModel)]="especie" class="especie">
+      <option>gato</option>
+      <option>cachorro</option>
+      <option>sapo</option>
+      <option>lagarto</option>
+    </select>
+    data:
+    <input placeholder="data" type="date" [(ngModel)]="data" class="tempo">
+    hora:
+    <input placeholder="hora" type="time" [(ngModel)]="hora" class="tempo">
+    <button id="btn" (click)="marcar()">marcar</button>
+  </div>
+
+</body>

@@ -16,8 +16,6 @@ export class ProdutoComponent implements OnInit {
   lista2 = [];
   idUser = localStorage.getItem('IdUser');
   
-  
-
   nomeProd = localStorage.getItem('nomeProd');
   constructor(private route: ActivatedRoute,
               private router: Router) {
@@ -42,6 +40,7 @@ export class ProdutoComponent implements OnInit {
     }).then((dados) => {
       console.log(dados);
       this.lista = dados.list;
+      this.router.navigate(['/loja/carrinho'])
     }).catch((erro) => {
       console.log(erro)
     })
@@ -99,6 +98,25 @@ export class ProdutoComponent implements OnInit {
 
   }
 
+  irLoja(){
+    this.router.navigate(['/loja/']);
+  }
+
+  irHome(){
+    this.router.navigate(['/home/']);
+  }
+
+  irPets(){
+    this.router.navigate(['/loja/pets'])
+  }
+
+  irCarrinho(){
+    this.router.navigate(['/loja/carrinho']);
+  }
+
+  irHorarios(){
+    this.router.navigate(['/loja/horarios']);
+  }
 
   comprar(item) {
     this.router.navigate(['/loja/', item.ID]);

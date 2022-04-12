@@ -10,6 +10,18 @@ inserirRota('/adicionarCarrinho', function name(dados, resposta) {
     });
 })
 
+inserirRota('/removerCarrinho', function name(dados, resposta) {
+    console.log(dados);
+
+    database(`DELETE FROM CARRINHO WHERE ID == "${dados.ID}"`).then(result => {
+        console.log('produto REMOVIDO com sucesso');
+        resposta({ message: 'produto REMOVIDO com sucesso!' });
+    }).catch(erro => {
+        console.log('erro ao REMOVER produto');
+        resposta({ erro: 'erro ao REMOVER o produto!' })
+    });
+})
+
 inserirRota('/buscarCarrinho', function (dados, resposta) {
     console.log(dados)
     database(`SELECT CARRINHO.ID, CARRINHO.ID_USER, CARRINHO.ID_PROD, PROD_APROVAR.NOME, PROD_APROVAR.IMG, PROD_APROVAR.PRECO FROM CARRINHO

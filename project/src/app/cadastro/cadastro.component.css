@@ -166,3 +166,11 @@ body{
     transition: 0.3s;
 }
 
+#google{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    width: 200px;
+    height: 50px;
+}

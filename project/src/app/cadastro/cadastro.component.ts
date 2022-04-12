@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsuarioService } from '../services/usuario.service'
+import {
+    AuthService,
+    GoogleLoginProvider
+} from 'angular-6-social-login-v2';
 
 @Component({
     selector: 'app-cadastro',
@@ -10,7 +14,25 @@ import { UsuarioService } from '../services/usuario.service'
 export class CadastroComponent implements OnInit {
 
     constructor(private usuarioService: UsuarioService,
-        private router: Router) { }
+        private router: Router,
+        private socialAuthService: AuthService ) { }
+
+        public socialSignIn(socialPlatform : string) {
+            let socialPlatformProvider;
+            if(socialPlatform == "google"){
+              socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
+            }
+            
+            
+            this.socialAuthService.signIn(socialPlatformProvider).then(
+              (userData) => {
+                console.log(socialPlatform+" sign in data : " , userData);
+                // Now sign-in with userData
+                // ...
+                    
+              }
+            );
+          }
 
     nome = '';
     senha = '';
@@ -60,5 +82,7 @@ export class CadastroComponent implements OnInit {
     registro() {
         this.router.navigate(['/registro/'])
     }
+
+    
 
 }

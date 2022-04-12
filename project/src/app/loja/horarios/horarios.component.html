@@ -29,4 +29,31 @@
 </body>
 </html>
 
+<body>
+  <div>
+    <div id="header">
+      <div id="rotas">
+        <button (click)='home()' class="rota">home</button>
+        <button (click)='irLoja()' class="rota">loja</button>
+        <button (click)='irCarrinho()' class="rota">carrinho</button>
+        <button class="rota" (click)='irPets()'>pets</button>
+        <button (click)='irHorarios()' class="rota">marque um horário</button>
+      </div>
+      <div id="divAdd">
+        <button id="addItem" (click)="aaa()">marcar horario</button>
+      </div>
+    </div>
   
+    <h1>Quadro de Horários:</h1>
+  
+  <table>
+      <th>nome do pet</th>  <th>espécie</th>  <th>data</th> <th>hora</th>
+      <tr *ngFor="let item of lista">
+        <td>{{item.PET}}</td>
+        <td>{{item.ESPECIE}}</td>
+        <td>{{item.DATA}}</td>
+        <td>{{item.HORA}}</td>
+      </tr>
+  </table>
+  </div>
+</body>

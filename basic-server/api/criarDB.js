@@ -73,3 +73,15 @@ database(`CREATE TABLE IF NOT EXISTS CARRINHO (
     ({ resposta: erro });
     console.log('falha');
 });
+
+database(`CREATE TABLE IF NOT EXISTS PET (
+    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+    NOME VARCHAR(45) NOT NULL,
+    IMG VARCHAR(9999999999)
+    )`).then(result => {
+    console.log('tabela criada')
+}).catch(erro => {
+    ({ resposta: erro });
+    console.log('falha');
+});
+
