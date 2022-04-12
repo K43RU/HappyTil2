@@ -11,6 +11,11 @@
     </div>
   </div>
 
+  <div id="nenhum" *ngIf="i <= 0">
+    <p>nenhum item no carrinho</p>
+    <button class="btn" (click)="aaa()">clique aqui para adicionar</button>
+  </div>
+
   <div id="legal">
   <div id="produto">
     <div id="Produtos" *ngFor="let item of lista">

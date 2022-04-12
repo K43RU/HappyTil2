@@ -17,6 +17,7 @@ export class ComprarComponent implements OnInit {
   img = undefined;
   img64 = undefined;
   lista = [];
+  i = 0;
 
   irHome(){
     this.router.navigate(['/home/']);
@@ -49,6 +50,9 @@ export class ComprarComponent implements OnInit {
     }).then((dados) => {
       console.log(dados);
       this.lista = dados.list;
+      if(this.lista.length != 0){
+        this.i++;
+      }
     }).catch((erro) => {
       console.log(erro)
     })

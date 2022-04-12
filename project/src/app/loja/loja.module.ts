@@ -9,6 +9,7 @@ import CheckLogged from '../checkLogged.canactivate';
 import { PetsComponent } from './pets/pets.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { AddItemComponent } from './add-item/add-item.component';
+import { MarcarHorarioComponent } from './marcar-horario/marcar-horario.component';
 
 const routes: Routes = [{
   path: 'loja', canActivate: [CheckLogged],children: [
@@ -17,6 +18,7 @@ const routes: Routes = [{
     {path: 'horarios', component: HorariosComponent},
     {path: 'pets', component: PetsComponent},
     {path: 'add', component: AddItemComponent},
+    {path: 'marcar', component: MarcarHorarioComponent},
     {path: ':id', component: ProdutoComponent}
   ]
 }]
@@ -27,7 +29,7 @@ const routes: Routes = [{
     RouterModule.forRoot(routes),
     FormsModule
   ],
-  declarations: [ComprarComponent, HorariosComponent, CarrinhoComponent, PetsComponent, ProdutoComponent, AddItemComponent],
+  declarations: [ComprarComponent, HorariosComponent, CarrinhoComponent, PetsComponent, ProdutoComponent, AddItemComponent, MarcarHorarioComponent],
   exports: [ ComprarComponent, HorariosComponent, CarrinhoComponent ]
 })
 

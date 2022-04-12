@@ -1,9 +1,37 @@
 <html>
 <body>
-  <h1>Pets que vieram até nós!</h1>
+
+  <div id="header">
+    <div id="rotas">
+      <button (click)='home()' class="rota">home</button>
+      <button (click)='irLoja()' class="rota">loja</button>
+      <button (click)='irCarrinho()' class="rota">carrinho</button>
+      <button class="rota" (click)='irPets()'>pets</button>
+      <button (click)='irHorarios()' class="rota">marque um horário</button>
+    </div>
+    </div>
+
+    <div id="corpo">
+    <div id="mostre">
+      nome do seu pet:
+      <input placeholder="nome" class="nome" [(ngModel)]="nome">
+      insira uma foto do seu pet:
+      <input class="foto" type="file" (change)="mudanca($event.target.files[0])" [(ngModel)]="img">
+      <button id="btn" (click)="mostrar()">mostrar</button>
+      </div>
+
+      <div id="containerProd">
+      <div id="pet" *ngFor="let item of lista">
+        <div id="info">
+          <img id="fotoPet" [src]=item.IMG>
+          {{item.NOME}}
+        </div>
+      </div>
+    </div>
 
   <div *ngFor="let pet of lista">
     {{pet.PET}} {{pet.ESPECIE}}
+  </div>
   </div>
 </body>
 </html>
