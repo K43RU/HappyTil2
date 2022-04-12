@@ -1,9 +1,12 @@
 <html>
 <body>
   <h1>Pets que vieram até nós!</h1>
+  
+  <br>
 
-  <div *ngFor="let pet of lista">
-    {{pet.PET}} {{pet.ESPECIE}}
+  <div *ngFor="let pet of lista" id="lista">
+    <b>nome:</b> {{pet.PET}} 
+    <b>espécie:</b> {{pet.ESPECIE}}
   </div>
 </body>
 </html>
