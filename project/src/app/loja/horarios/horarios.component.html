@@ -1,34 +1,3 @@
-<html>
-<body>
-  
-  <div id="TT">
-    <input placeholder="nome do pet" [(ngModel)]="pet" id="input">
-    <select [(ngModel)]="especie" id="input">
-      <option>gato</option>
-      <option>cachorro</option>
-      <option>sapo</option>
-      <option>lagarto</option>
-    </select>
-    <input placeholder="data" type="date" [(ngModel)]="data" id="input">
-    <input placeholder="hora" type="time" [(ngModel)]="hora" id="input">
-    <button (click)="marcar()" id="marcar">marcar</button>
-  </div>
-
-  <h1>Quadro de Horários</h1>
-
-<table>
-    <th>nome do pet</th>  <th>espécie</th>  <th>data</th> <th>hora</th>
-    <tr *ngFor="let item of lista">
-      <td>{{item.PET}}</td>
-      <td>{{item.ESPECIE}}</td>
-      <td>{{item.DATA}}</td>
-      <td>{{item.HORA}}</td>
-    </tr>
-</table>
-
-</body>
-</html>
-
 <body>
   <div>
     <div id="header">

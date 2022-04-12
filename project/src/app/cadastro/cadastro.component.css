@@ -166,11 +166,26 @@ body{
     transition: 0.3s;
 }
 
+#gugol{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
 #google{
+    transition: 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
     width: 200px;
     height: 50px;
+}
+
+#google:hover{
+    cursor: pointer;
+    transition: 0.3s;
+    width: 240px;
+    border-radius: 20px;
 }
