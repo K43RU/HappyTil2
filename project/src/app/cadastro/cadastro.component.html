@@ -7,9 +7,12 @@
   <input placeholder="informe o seu nome" [(ngModel)]="nome" id='login'>
   <input placeholder="informe a sua senha" [(ngModel)]="senha" id='login1' type="password">
   <button (click)='entrar()' id="entrar">entrar</button>
+  <button (click)="socialSignIn('google')" id="google"><img style="width: 20px; height: 20px; margin-right: 10px;" src="https://www.nicepng.com/png/full/20-206176_google-icon-icons-portrait-of-a-man.png"> Sign in with Google</button>
   <div id="conta" (click)="registro()">Ainda não tenho conta</div>
 </div>
 </div>
+
+
 <div id='logo'>
 <img src="https://img.icons8.com/glyph-neue/64/000000/dinosaur.png"/>
 HappyTil!
