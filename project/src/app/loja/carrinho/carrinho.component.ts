@@ -61,7 +61,28 @@ export class CarrinhoComponent implements OnInit {
     this.router.navigate(['/loja/horarios']);
   }
 
-  add() {}
+  remover(item){
+    fetch('/api/removerCarrinho',
+    {
+      method: 'POST',
+      body: JSON.stringify({
+        ID: item.ID
+      })
+      ,
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+  ).then((result) => {
+    return result.json();
+  }).then((dados) => {
+    console.log(dados);
+    this.lista = dados.list;
+    location.reload();
+  }).catch((erro) => {
+    console.log(erro)
+  })
+  }
 
   comprar(item) {
     this.router.navigate(['/loja/', item.ID]);
