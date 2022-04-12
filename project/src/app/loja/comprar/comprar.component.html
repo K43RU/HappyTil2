@@ -11,6 +11,15 @@
     </div>
   </div>
 
+  <div>
+    <input [(ngModel)]="pequisa">
+    <button (click)="pesquisar()">pesquisar</button>
+  </div>
+
+  <div *ngFor="let item of lista2">
+    {{item.NOME}}
+  </div>
+
   <div id="nenhum" *ngIf="i <= 0">
     <p>nenhum item no carrinho</p>
     <button class="btn" (click)="aaa()">clique aqui para adicionar</button>
