@@ -1,3 +1,4 @@
+import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -13,8 +14,31 @@ export class MainComponent implements OnInit {
   nome = localStorage.getItem('nome');
   email = localStorage.getItem('email');
   img = localStorage.getItem('img');
+  id_user = localStorage.getItem('IdUser');
+
+  lista = [];
+  i = 0;
 
   ngOnInit() {
+    fetch('/api/buscarCarrinho',
+                {
+                    method: 'POST',
+                    body: JSON.stringify({
+                      idUser: this.id_user
+                    }),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }
+            ).then((result) => {
+                return result.json();        
+            }).then((dados) => {
+                this.lista = dados.list;
+                console.log(this.lista.length)
+                this.i = this.lista.length;
+            }).catch((erro) => {
+                console.log(erro)
+            })
   }
 
   irLoja(){
