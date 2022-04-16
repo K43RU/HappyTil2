@@ -162,73 +162,27 @@ body{
 
 #anuncio{
     width: 100%;
-    display: grid;
-    justify-content: center;
-}
-
-.slider input {
-    display: none;
-}
-
-.slider label {
-    background-color: #000;
-    bottom: 10px;
-    cursor: pointer;
-    display: block;
-    height: 10px;
-    position: absolute;
-    width: 10px;
-    z-index: 10;
-}
-
-ul{
-    list-style: none;
-    width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.slider li:nth-child(1) label {
-    left: 10px;
-    border-radius: 50%;
+#lateral{
+    margin-top: 10px;
+    display: grid;
 }
 
-.slider label:checked{
-    left: 10px;
-    background-color: #ffd000;
-    color: #ffd000;
+#img1{
+    width: 900px;
+    height: 400px;
+    margin: 10px;
 }
 
-.slider li:nth-child(2) label {
-    left: 40px;
-    border-radius: 50%;
+#img2{
+    width: 500px;
+    height: 195px;
 }
 
-.slider li:nth-child(3) label {
-    left: 70px;
-    border-radius: 50%;
-}
-
-.slider img {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.slider li input:checked ~ img {
-    opacity: 1;
-    visibility: visible;
-    z-index: 10;
-}
-
-.slider li input:checked ~label{
-    background-color: #d1ab00;
-}
-
-li{
-    position: absolute;
-}
-
-#img{
-    width: 1100px;
-    height: 500px;
+#img3{
+    width: 500px;
+    height: 195px;
 }
