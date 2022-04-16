@@ -5,7 +5,6 @@
       <button (click)='home()' class="rota">home</button>
       <button (click)='irLoja()' class="rota">loja</button>
       <button (click)='irCarrinho()' class="rota">carrinho</button>
-      <button class="rota" (click)='irPets()'>pets</button>
       <button (click)='irHorarios()' class="rota">marque um horário</button>
     </div>
     </div>
@@ -27,11 +26,6 @@
         </div>
       </div>
     </div>
-
-  <div *ngFor="let pet of lista" id="lista">
-    <b>nome:</b> {{pet.PET}} 
-    <b>espécie:</b> {{pet.ESPECIE}}
-  </div>
   </div>
 </body>
 </html>

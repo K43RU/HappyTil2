@@ -13,7 +13,7 @@ export class ComprarComponent implements OnInit {
   constructor(private router: Router) { }
 
   id = localStorage.getItem('IdUser');
-
+  pesquisa = '';
   nome = '';
   preco = '';
   img = undefined;
@@ -35,6 +35,32 @@ export class ComprarComponent implements OnInit {
 
   irHorarios(){
     this.router.navigate(['/loja/horarios']);
+  }
+
+  pesquisar(){
+
+    fetch('/api/pesquisar',
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          nome: this.pesquisa
+        }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+    ).then((result) => {
+      return result.json();
+    }).then((dados) => {
+      console.log(dados);
+      this.lista = dados.list;
+      if(this.lista.length != 0){
+        this.i++;
+      }
+    }).catch((erro) => {
+      console.log(erro)
+    })
+
   }
 
   ngOnInit() {

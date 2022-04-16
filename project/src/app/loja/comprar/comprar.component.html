@@ -11,6 +11,13 @@
     </div>
   </div>
 
+  <div id="search">
+    <div id="sos">
+      <input [(ngModel)]="pesquisa" id="pesquisa" placeholder="pesquisa...">
+      <button (click)="pesquisar()" id="pesquisar"><img style="width: 22px; height: 22px;" src="https://icones.pro/wp-content/uploads/2021/06/icone-loupe-noir.png"></button>
+    </div>
+  </div>
+
   <div id="nenhum" *ngIf="i <= 0">
     <p>nenhum item no carrinho</p>
     <button class="btn" (click)="aaa()">clique aqui para adicionar</button>
