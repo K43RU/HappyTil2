@@ -184,7 +184,7 @@ body{
     width: 500px;
     overflow: auto;
     padding: 5px;
-    margin-top: -150px;
+    margin-top: -85px;
 }
 
 #produtos{
@@ -227,6 +227,7 @@ body{
     transition: 0.3s;
     margin-bottom: 5px;
     border-radius: 3px;
+    object-fit: cover;
 }
 
 #produtinho:hover #imgProdutos{

@@ -121,3 +121,35 @@ body{
     border-radius: 30px;
     transition: 0.3s;
 }
+
+#pet{
+    width: 20%;
+    background-color: white;
+    border-radius: 3px;
+    display: inline-flex;
+    padding: 5px;
+    margin: 10px;
+
+}
+
+#info{
+    margin-left: 10px;
+    width: 100%;
+    display: grid;
+}
+
+.imagem{
+    border-radius: 5px;
+}
+
+#containerProd{
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+#geral{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}

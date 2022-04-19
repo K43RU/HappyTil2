@@ -14,7 +14,7 @@ export class HorariosComponent implements OnInit {
   especie = '';
   data = undefined;
   hora = undefined;
-
+  i = 0;
   lista = [];
 
   home(){
@@ -54,6 +54,7 @@ export class HorariosComponent implements OnInit {
 }).then((dados) => {
     console.log(dados);
     this.lista = dados.list;
+    this.i = this.lista.length;
 }).catch((erro) => {
     console.log(erro)
 })

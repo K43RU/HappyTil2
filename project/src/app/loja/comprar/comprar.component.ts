@@ -76,9 +76,7 @@ export class ComprarComponent implements OnInit {
     }).then((dados) => {
       console.log(dados);
       this.lista = dados.list;
-      if(this.lista.length != 0){
-        this.i++;
-      }
+      this.i = this.lista.length;
     }).catch((erro) => {
       console.log(erro)
     })

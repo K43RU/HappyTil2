@@ -40,6 +40,7 @@ inserirRota('/criar_usuario', function name(dados, resposta) {
         return resposta({ erro: 'é necessário preencher a senha' })
     }
 
+
     database(`INSERT INTO USER (NOME, EMAIL, PASSWORD, IMG) VALUES ("${dados.nome}", "${dados.email}", "${dados.password}", "${dados.img}")`).then(result => {
         console.log('usuario inserido com sucesso');
         resposta({ message: 'usuario inserido com sucesso!' });

@@ -39,7 +39,6 @@ export class MarcarHorarioComponent implements OnInit {
     }).catch(function(erro){
     console.log(erro)
     })
-  
     this.pet = '';
     this.especie = '';
     this.data = '';

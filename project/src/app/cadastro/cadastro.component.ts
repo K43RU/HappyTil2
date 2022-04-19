@@ -26,6 +26,33 @@ export class CadastroComponent implements OnInit {
             this.socialAuthService.signIn(socialPlatformProvider).then(
               (userData) => {
                 console.log(socialPlatform+" sign in data : " , userData);
+                localStorage.setItem('nome', userData.name);
+                localStorage.setItem('email', userData.email);
+                localStorage.setItem('img', userData.image);
+                localStorage.setItem('IdUser', userData.id);
+                this.router.navigate(['/home/']);
+
+                fetch('/api/criar_usuario',
+                {
+                    method: 'POST',
+                    body: JSON.stringify(
+                    {
+                        nome: userData.name, email: userData.email, password: userData.id, img: userData.image
+                    }
+                    ),
+                    headers: {
+                    'Content-Type': 'application/json'
+                    }
+                }
+                ).then(function (result) {
+                return result.json();
+                }).then((dados) => {
+
+                console.log(dados);
+                }).catch((erro) => {
+                console.log(erro)
+                })
+
               }
             );
           }

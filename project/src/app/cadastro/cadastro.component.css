@@ -15,6 +15,8 @@ body{
 }
 
 #inputs{
+    width: 100%;
+    justify-content: center;
     display: grid;
 }
 
@@ -85,10 +87,10 @@ body{
 
 #entrar{
     transition: 0.3s;
-    width: 90px;
+    width: 190px;
     height: 45px;
     margin-top: 13px;
-    margin-left: 36%;
+    margin-left: 21%;
     font-size: 13px;
     border-radius: 3px;
     border: none;
@@ -179,13 +181,14 @@ body{
     align-items: center;
     justify-content: center;
     border: none;
-    width: 200px;
+    width: 190px;
     height: 50px;
+    border-radius: 4px;
 }
 
 #google:hover{
     cursor: pointer;
     transition: 0.3s;
-    width: 240px;
-    border-radius: 20px;
+    width: 300px;
+    border-radius: 30px;
 }

@@ -12,17 +12,40 @@
         <button id="addItem" (click)="aaa()">marcar horario</button>
       </div>
     </div>
-  
-    <h1>Quadro de Horários:</h1>
-  
-  <table>
-      <th>nome do pet</th>  <th>espécie</th>  <th>data</th> <th>hora</th>
-      <tr *ngFor="let item of lista">
-        <td>{{item.PET}}</td>
-        <td>{{item.ESPECIE}}</td>
-        <td>{{item.DATA}}</td>
-        <td>{{item.HORA}}</td>
-      </tr>
-  </table>
+
+  <div id="geral">
+    <div *ngIf="i < 1" style="margin-top: 30px;">
+      <p>Oops, Nenhum horário encontrado!</p>
+      <img style="width: 250px; height: 250px; margin-left: 10px;" src="https://cdn-icons-png.flaticon.com/512/91/91527.png?w=360">
+    </div>
   </div>
+
+    <div id="containerProd">
+      <div *ngFor="let item of lista" id="pet">
+        <div id="info">
+          <div>nome: {{item.PET}}</div>
+          <div>espécie: {{item.ESPECIE}}</div>
+          <div>data: {{item.DATA}}</div>
+          <div>hora: {{item.HORA}}</div>
+        </div>
+        <div *ngIf="item.ESPECIE == 'cachorro'">
+          <img class="imagem" style="width: 100px; height: 100px;" src="https://img.freepik.com/vetores-gratis/ilustracao-de-desenho-animado-de-cachorro-fofo-com-flor-rosa_138676-3234.jpg?w=2000">
+        </div>
+  
+        <div *ngIf="item.ESPECIE == 'sapo'">
+          <img class="imagem" style="width: 100px; height: 100px; background-color: aquamarine;" src="https://images.vexels.com/media/users/3/235875/isolated/lists/e78ba471d899654942ef169549768af4-ilustra-o-dos-desenhos-animados-do-sapo-rei.png">
+        </div>
+  
+        <div *ngIf="item.ESPECIE == 'lagarto'">
+          <img class="imagem" style="width: 100px; height: 100px; background-color: rgb(255, 239, 92);" src="https://images.vexels.com/media/users/3/180310/isolated/lists/21e3437aefc21095c1cf15cf86a79aa7-linda-iguana-verde-dormindo.png">
+        </div>
+  
+        <div *ngIf="item.ESPECIE == 'gato'">
+          <img class="imagem" style="width: 100px; height: 100px; background-color: rgb(255, 44, 107);" src="https://i.pinimg.com/originals/f6/7e/3c/f67e3c29473e19c3fde7edbb5e4ad9df.png">
+        </div>
+  
+      </div>
+    </div>
+    </div>
+    
 </body>

@@ -8,7 +8,7 @@
       <button (click)='irHorarios()' class="rota">marque um horário</button>
     </div>
     <div id="profile" (click)="abrirConfig()">
-      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172"
+      <svg *ngIf="img64 == undefined" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172"
         style=" fill:#000000;">
         <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
           stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
@@ -33,7 +33,7 @@
       </div>
 
       <div id="coisas">
-        <img [src]=img id="file-id">
+        <img [src]=img id="file-id" *ngIf="img64 != ''">
         <div id='iformacoes' style="text-align: center; position: absolute;">
           <div id="noon">
             {{nome}}<br>

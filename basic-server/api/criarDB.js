@@ -11,8 +11,8 @@ database(`CREATE TABLE IF NOT EXISTS TESTE (
 
 database(`CREATE TABLE IF NOT EXISTS USER (
     ID INTEGER PRIMARY KEY AUTOINCREMENT,
-    NOME varchar(30),
-    EMAIL varchar(30),
+    NOME varchar(30) UNIQUE,
+    EMAIL varchar(30) UNIQUE,
     PASSWORD varchar(30),
     IMG varchar(99999999)
     )`).then(result => {

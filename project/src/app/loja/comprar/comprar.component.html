@@ -25,22 +25,22 @@
   </div>
 
   <div id="legal">
-  <div id="produto">
-    <div id="Produtos" *ngFor="let item of lista">
-        <div id="prodInfo">
-          <img class="prodImg" [src]=item.IMG>
-          <div id="img"></div>
-          <div class="preco">
-            R${{item.PRECO}}
-          </div>
-          <div id="info">
-            {{item.NOME}}
-            <div id="buttons">
-              <button id="comprar" (click)="comprar(item)">comprar</button>
+    <div id="container">
+      <div id="Produtos" *ngFor="let item of lista">
+          <div id="prodInfo">
+            <img class="prodImg" [src]=item.IMG>
+            <div id="img"></div>
+            <div class="preco">
+              R${{item.PRECO}}
+            </div>
+            <div id="info">
+              {{item.NOME}}
+              <div id="buttons">
+                <button id="comprar" (click)="comprar(item)">comprar</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 </body>

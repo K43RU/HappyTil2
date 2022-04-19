@@ -63,6 +63,7 @@ inserirRota('/pesquisar', function (dados, resposta) {
         .then(result => {
             console.log('produto buscado com sucesso');
             resposta({ list: result });
+
         }).catch(erro => {
             console.log('erro ao buscar produto');
             resposta({ erro: 'erro ao buscar o produto!' })
