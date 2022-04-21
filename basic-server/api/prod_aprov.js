@@ -9,7 +9,7 @@ inserirRota('/cadastroProd', function name(dados, resposta) {
         return resposta({ erro: 'é necessário preencher o preco' })
     }
 
-    database(`INSERT INTO PROD_APROVAR (NOME, PRECO, IMG) VALUES ("${dados.nome}", "${dados.preco}", "${dados.img}")`).then(result => {
+    database(`INSERT INTO PROD_APROVAR (NOME, PRECO, IMG, ID_USER) VALUES ("${dados.nome}", "${dados.preco}", "${dados.img}", "${dados.id}")`).then(result => {
         console.log('produto inserido com sucesso');
         resposta({ message: 'produto inserido com sucesso!' });
     }).catch(erro => {
@@ -70,3 +70,15 @@ inserirRota('/pesquisar', function (dados, resposta) {
         });
 
 });
+
+inserirRota('/removerProduto', function name(dados, resposta) {
+    console.log(dados);
+
+    database(`DELETE FROM PROD_APROVAR WHERE ID == "${dados.ID}"`).then(result => {
+        console.log('produto REMOVIDO com sucesso');
+        resposta({ message: 'produto REMOVIDO com sucesso!' });
+    }).catch(erro => {
+        console.log('erro ao REMOVER produto');
+        resposta({ erro: 'erro ao REMOVER o produto!' })
+    });
+})

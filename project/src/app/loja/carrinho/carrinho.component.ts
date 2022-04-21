@@ -16,6 +16,7 @@ export class CarrinhoComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
+    console.log(this.id_user)
     fetch('/api/buscarCarrinho',
       {
         method: 'POST',

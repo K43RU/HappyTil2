@@ -22,6 +22,7 @@
     <div id="valorTotal" *ngFor="let item of lista">
       Valor total:<br>
       R$ {{qtd * item.PRECO}}
+      <button id="deletar" *ngIf="item.ID_USER == idUser" (click)="remover()">apagar</button>
     </div>
 
       <div id="btns">

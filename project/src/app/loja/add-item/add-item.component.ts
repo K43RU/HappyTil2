@@ -15,6 +15,7 @@ export class AddItemComponent implements OnInit {
   img = undefined;
   img64 = undefined;
   lista = [];
+  id = localStorage.getItem('IdUser');
 
   irHome(){
     this.router.navigate(['/home/']);
@@ -52,7 +53,7 @@ export class AddItemComponent implements OnInit {
       {
         method: 'POST',
         body: JSON.stringify({
-          nome: this.nome, preco: this.preco, img: this.img64
+          nome: this.nome, preco: this.preco, img: this.img64, id: this.id
         }),
         headers: {
           'Content-Type': 'application/json'

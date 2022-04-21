@@ -29,7 +29,6 @@ export class CadastroComponent implements OnInit {
                 localStorage.setItem('nome', userData.name);
                 localStorage.setItem('email', userData.email);
                 localStorage.setItem('img', userData.image);
-                localStorage.setItem('IdUser', userData.id);
                 this.router.navigate(['/home/']);
 
                 fetch('/api/criar_usuario',
@@ -47,7 +46,7 @@ export class CadastroComponent implements OnInit {
                 ).then(function (result) {
                 return result.json();
                 }).then((dados) => {
-
+                localStorage.setItem('IdUser', dados.user.ID);
                 console.log(dados);
                 }).catch((erro) => {
                 console.log(erro)

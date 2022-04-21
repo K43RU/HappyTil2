@@ -52,7 +52,7 @@ export class ProdutoComponent implements OnInit {
   preco = '';
 
   ngOnInit() {
-
+    console.log(this.idUser);
     fetch('/api/buscar_produt',
       {
         method: 'POST',
@@ -96,6 +96,27 @@ export class ProdutoComponent implements OnInit {
       console.log(erro)
     })
 
+  }
+
+  remover(){
+    fetch('/api/removerProduto',
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          ID: this.idProduto
+        })
+        ,
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+    ).then((result) => {
+      return result.json();
+    }).then((dados) => {
+      this.router.navigate(['/loja/'])
+    }).catch((erro) => {
+      console.log(erro)
+    })
   }
 
   irLoja(){
