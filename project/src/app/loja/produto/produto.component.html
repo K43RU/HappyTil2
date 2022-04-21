@@ -40,7 +40,8 @@
             <div id="infoProds">
             <img id="imgProdutos" [src]=item.IMG>
             <div id="nomezinho">{{item.NOME}}</div>
-            <button id="visitar" (click)="comprar(item)">visitar</button> 
+            <div id="nomezinho">R${{item.PRECO}}</div>
+            <div id="nomezinho"><button id="visitar" (click)="comprar(item)">visitar</button></div>
           </div>
       </div>
   </div>

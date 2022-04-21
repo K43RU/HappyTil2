@@ -256,6 +256,7 @@ body{
 #produtinho #visitar:hover{
     border-radius: 30px;
     transition: 0.3s;
+    color: white;
 }
 
 #visitar{
@@ -271,10 +272,9 @@ body{
 
 #infoProds{
     display: grid;
-    width: 170px;
-    height: 200px;
+    width: 160px;
+    height: 190px;
     display: grid;
-    align-items: center;
     justify-content: center;
     background-color: #fff;
     border-radius: 10px;
@@ -282,11 +282,13 @@ body{
 
 #produtinho:hover #infoProds{
     transition: 0.3s;
-    height: 275px;
+    height: 285px;
 }
 
 #nomezinho{
-    align-items: center;
+    width: 100%;
+    display: grid;
+    justify-content: center;
     color: transparent;
 }
 
