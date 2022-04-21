@@ -219,21 +219,27 @@ body{
     margin-left: 20px;
     display: grid;
     justify-content: center;
+    height: 270px;
 }
 
 #imgProdutos{
-    width: 180px;
-    height: 230px;
+    width: 150px;
+    height: 180px;
     transition: 0.3s;
     margin-bottom: 5px;
-    border-radius: 3px;
+    border-radius: 10px;
     object-fit: cover;
+    padding: 5px;
 }
 
 #produtinho:hover #imgProdutos{
     opacity: 75%;
     transition: 0.3s;
     border-radius: 10px;
+}
+
+#produtinho:hover #nomezinho{
+    color: black;
 }
 
 #produtinho:hover #visitar{
@@ -261,9 +267,21 @@ body{
 
 #infoProds{
     display: grid;
+    width: 180px;
+    height: 200px;
+    display: grid;
+    align-items: center;
     justify-content: center;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+#produtinho:hover #infoProds{
+    transition: 0.3s;
+    height: 275px;
 }
 
 #nomezinho{
     align-items: center;
+    color: transparent;
 }

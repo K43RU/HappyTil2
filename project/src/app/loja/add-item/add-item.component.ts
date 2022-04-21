@@ -16,6 +16,26 @@ export class AddItemComponent implements OnInit {
   img64 = undefined;
   lista = [];
 
+  irHome(){
+    this.router.navigate(['/home/']);
+  }
+
+  irPets(){
+    this.router.navigate(['/loja/pets'])
+  }
+
+  irCarrinho(){
+    this.router.navigate(['/loja/carrinho']);
+  }
+
+  irHorarios(){
+    this.router.navigate(['/loja/horarios']);
+  }
+  
+  irLoja(){
+    this.router.navigate(['/loja/']);
+  }
+
   mudanca(file) {
     var reader = new FileReader();
     reader.readAsDataURL(file);

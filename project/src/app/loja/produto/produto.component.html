@@ -26,7 +26,7 @@
 
       <div id="btns">
         <button  id="addCarrinho" (click)="add()" aria-label="adicionar ao carrinho">
-          <img id="carrinho" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/344/external-shopping-cart-ecommerce-kiranshastry-solid-kiranshastry.png">
+          <img id="carrinho" src="https://cdn-icons-png.flaticon.com/128/6713/6713639.png">
         </button>
         <button  id="confirmar">confirmar compra</button>
       </div>
@@ -36,9 +36,9 @@
     <div id="lista">
   <div id="produtos">
             <div id="produtinho" *ngFor="let item of lista2"> 
-            <div id="nomezinho">{{item.NOME}}</div>
             <div id="infoProds">
             <img id="imgProdutos" [src]=item.IMG>
+            <div id="nomezinho">{{item.NOME}}</div>
             <button id="visitar" (click)="comprar(item)">visitar</button> 
           </div>
       </div>

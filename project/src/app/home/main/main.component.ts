@@ -64,7 +64,7 @@ export class MainComponent implements OnInit {
 
   abrirConfig(){
     document.getElementById('user').style.width = '350px'
-    document.getElementById('user').style.height = '80vh'
+    document.getElementById('user').style.height = '60vh'
     document.getElementById('user').style.fontSize = '17px'
     document.getElementById('logout').style.width = '100px'
     document.getElementById('logout').style.height = '50px'
